@@ -1,14 +1,14 @@
 // open menu
 $(function() {
     $(".menuButtonWrap").click(function(e){
-        $(".main-menu").toggleClass("open");
+        $(".navWrapper").toggleClass("open");
         	e.stopPropagation();
     });
 });
 // close menu
 $(function() {
     $("#closeMenu").click(function(e){
-        $(".main-menu").toggleClass("open");
+        $(".navWrapper").toggleClass("open");
         	e.stopPropagation();
     });
 });

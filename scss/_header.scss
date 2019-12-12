@@ -21,6 +21,16 @@
     box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
 	}
 }
+.scrollUp {
+		-webkit-transform: translateY(0);
+    transform: translateY(0);
+		-webkit-transition: .3s ease;
+		transition: .3s ease;
+		@include breakpoint (laptopScreen) {
+			-webkit-transform: translateY(-165px);
+      transform: translateY(-165px);
+		}
+}
 .site-header{
 	position: relative;
 	top: 0;
@@ -30,6 +40,7 @@
 	-webkit-transition: .3s ease;
 	transition: .3s ease;
 	background-color: $white;
+	border-bottom: 5px solid $brandColor;
 	@include breakpoint (laptopScreen) {
 		position: fixed;
 	}
@@ -55,13 +66,19 @@
 		margin: 0 auto;
 	}
 	@include breakpoint(largeScreen){
-		width: 60%;
+		width: 90%;
 	}
 }
 #logoWrapper {
 	display: flex;
 	justify-content: space-between;
 	width: 95%;
+	@include breakpoint (laptopScreen) {
+		width: auto;
+	}
+}
+#siteLogo {
+	margin-top: 13px;
 }
 .site-navigation{
 	background: $white;
@@ -70,21 +87,31 @@
 		justify-content: flex-end;
 	}
 }
-.scrollUp {
-		-webkit-transform: translateY(0);
-		        transform: translateY(0);
-		-webkit-transition: .3s ease;
-		transition: .3s ease;
-		@include breakpoint (laptopScreen) {
-			-webkit-transform: translateY(-165px);
-			        transform: translateY(-165px);
-		}
+#secondary {
+	display: flex;
+	a {
+		color: $darkGrey;
+		text-decoration: none;
+		margin-right: 10px;
+		padding: 10px 10px 0 10px;
+		font-size: 14px;
+	}
 }
 .custom-logo-link {
  img {
-	 width: 150px;
-	 height: 100%;
+	 width: 200px;
+	 height: auto;
+	 padding: 10px;
  }
+}
+.navWrapper {
+	display: none;
+	width: 95%;
+	margin-bottom: 15px;
+	@include breakpoint (laptopScreen) {
+		display: block;
+		margin-bottom: 0;
+	}
 }
 .menu-main-menu-container {
 	width: 100%;
@@ -100,31 +127,125 @@
 	ul {
 		padding: 0;
 	}
+	.sub-menu {
+		@include breakpoint (laptopScreen) {
+			display: none;
+		}
+		li {
+			a {
+				font-size: 16px;
+			}
+		}
+	}
 }
 .main-menu {
-	display: none;
 	li {
 		list-style-type: none;
 		padding: 15px 5px;
-		border-bottom: 1px solid $lightGrey;
 		@include breakpoint (laptopScreen) {
-			padding: 10px 5px;
+			padding: 5px;
 			border-bottom: none;
 		}
 	}
+	li:last-of-type {
+		a {
+			background-color: $brandColor;
+			color: $white;
+			padding: 5px 20px;
+			transition: .2s ease;
+			&:hover {
+				background-color: $accentColor;
+				color: $brandColor;
+				transition: .2s ease;
+			}
+			&:after {
+				height: 0;
+			}
+		}
+	}
 	a {
-		font-family: $roboto;
+		font-family: $montserrat;
 		font-size: 20px;
-		font-weight: 700;
+		font-weight: 600;
 		color: $brandColor;
-		padding: 20px;
+		padding: 10px;
 		text-decoration: none;
+		text-transform: uppercase;
+		position: relative;
+		&:after {
+			position: absolute;
+			content: "";
+			background: $brandColor;
+			bottom: 5px;
+			right: 0;
+			width: 100%;
+  		-webkit-transform: scaleX(0);
+      transform: scaleX(0);
+			height: 3px;
+			-webkit-transition: -webkit-transform 0.2s ease-out;
+			transition: -webkit-transform 0.2s ease-out;
+			transition: transform 0.2s ease-out;
+			transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+			-webkit-transform-origin: bottom right;
+      transform-origin: bottom right;
+		}
+		&:hover {
+			&:after {
+				-webkit-transform-origin: bottom left;
+				transform-origin: bottom left;
+				-webkit-transform: scaleX(1);
+				transform: scaleX(1);
+			}
+		}
+		&:focus{
+			&:after{
+				-webkit-transform-origin: bottom left;
+        transform-origin: bottom left;
+				-webkit-transform: scaleX(1);
+        transform: scaleX(1);
+			}
+		}
 	}
 	@include breakpoint (laptopScreen) {
 		display: flex;
 		flex-direction: row;
 		position: relative;
 		align-items: center;
+	}
+	.menu-item:nth-child(2), .menu-item:nth-child(3) {
+		padding-top: 0;
+		@include breakpoint (laptopScreen) {
+			padding-top: 5px;
+		}
+	}
+}
+.subNav {
+	background-color: $brandColor;
+	nav {
+		width: 95%;
+		margin: 0 auto;
+		@include breakpoint (laptopScreen) {
+			width: 90%;
+		}
+	}
+	ul {
+		display: flex;
+		justify-content: flex-end;
+		padding: 0;
+		li {
+			list-style-type: none;
+			a {
+				text-decoration: none;
+				color: $white;
+				padding: 0 10px;
+				font-size: 16px;
+				transition: .2s ease;
+				&:hover {
+					color: $accentColor;
+					transition: .2s ease;
+				}
+			}
+		}
 	}
 }
 .mobileMenuItem {
@@ -143,6 +264,7 @@
 	background-color: $brandColor;
 	color: $white;
 	padding: 10px;
+	width: 100%;
 	@include breakpoint (laptopScreen) {
 		display: none;
 	}
@@ -155,73 +277,11 @@
 		position: relative;
 	}
 }
-.menuLinkWrap{
-	display: flex;
-  align-items: center;
-}
-.secondaryMenuWrap{
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: reverse;
-	    -ms-flex-direction: column-reverse;
-	        flex-direction: column-reverse;
-	position: absolute;
-	top: 70px;
-	display: none;
-	-webkit-transition: 2.3s ease;
-	transition: 2.3s ease;
-	@include breakpoint (largeMobileScreen) {
-		top: 100px;
-	}
-	@include breakpoint (laptopScreen) {
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-box-pack: end;
-		    -ms-flex-pack: end;
-		        justify-content: flex-end;
-		-webkit-box-orient: horizontal;
-		-webkit-box-direction: normal;
-		    -ms-flex-direction: row;
-		        flex-direction: row;
-		-webkit-box-align: center;
-		    -ms-flex-align: center;
-		        align-items: center;
-		top: 0;
-		-webkit-transform: translateY(0);
-		        transform: translateY(0);
-		-webkit-transition: .3s ease;
-		transition: .3s ease;
-	}
-}
 .entry-header{
 	display:none;
 }
 nav{
 	width: 100%;
-}
-.menuText{
-	cursor: pointer;
-	font-family: $roboto;
-	font-size: 26px;
-	font-weight: 700;
-	padding-right: 5px;
-	color: $black;
-	text-decoration: none;
-	-webkit-transition: .3s ease-out all;
-	transition: .3s ease-out all;
-}
-.menuTextWrap{
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: baseline;
-	    -ms-flex-align: baseline;
-	        align-items: baseline;
-	margin-left: 10px;
-	right: 100px;
 }
 .open{
 	display: flex !important;
@@ -229,7 +289,6 @@ nav{
 	background: $white;
 	-webkit-transition: .1s ease-out all !important;
 	transition: .1s ease-out all !important;
-	border-bottom: 1px solid $lightGrey;
 }
 .menuButtonWrap{
 	display:-webkit-box;

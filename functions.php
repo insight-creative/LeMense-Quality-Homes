@@ -105,13 +105,6 @@ function insightcustom_widgets_init() {
 }
 add_action( 'widgets_init', 'insightcustom_widgets_init' );
 /*********************************************************
-Add custom admin login screen styles
-*********************************************************/
-function my_login_stylesheet() {
-    wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/style-login.css' );
-}
-add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
-/*********************************************************
 Add a custom excerpt length
 *********************************************************/
 function custom_excerpt_length( $length ) {
@@ -125,12 +118,16 @@ Translators: If there are characters in your language that are not
 supported by Roboto, translate this to 'off'. Do not translate
 into your own language.
 *********************************************************/
- $Roboto = _x( 'on', 'Roboto font: on or off', 'insightcustom' );
+ $Montserrat = _x( 'on', 'Montserrat font: on or off', 'insightcustom' );
+ $OpenSans = _x( 'on', 'Open Sans font: on or off', 'insightcustom' );
  $font_families = array();
- if ( 'off' !== $Roboto ) {
-	 $font_families[] = 'Roboto:400,500,700,900';
+ if ( 'off' !== $Montserrat ) {
+	 $font_families[] = 'Montserrat:400,500,700,900';
  }
- if ( in_array( 'on', array($Roboto) ) ) {
+ if ( 'off' !== 	$OpenSans ) {
+	$font_families[] = 'Open Sans:400,700';
+}
+ if ( in_array( 'on', array($Montserrat, $OpenSans) ) ) {
 	 $query_args = array(
 		 'family' => urlencode( implode( '|', $font_families ) ),
 		 'subset' => urlencode( 'latin,latin-ext' ),
