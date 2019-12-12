@@ -1,0 +1,365 @@
+/*--------------------------------------------------------------
+5.0 Header Styling
+--------------------------------------------------------------*/
+.screenReaderSkipToContent{
+	position: absolute;
+	top: -100px;
+	&:focus{
+		left: 6px;
+    top: 7px;
+    height: auto;
+    width: auto;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 23px 14px;
+    background: $brandColor;
+    color: $white;
+    z-index: 100000;
+    line-height: normal;
+    text-decoration: none;
+    box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
+	}
+}
+.site-header{
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 999999;
+	width: 100vw;
+	-webkit-transition: .3s ease;
+	transition: .3s ease;
+	background-color: $white;
+	@include breakpoint (laptopScreen) {
+		position: fixed;
+	}
+}
+#mastheadContainer {
+	background: $white;
+}
+#mastheadInner {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: column;
+	-webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+	justify-content: space-between;
+	@include breakpoint (laptopScreen) {
+		flex-direction: row;
+		width: 95%;
+		margin: 0 auto;
+	}
+	@include breakpoint(largeScreen){
+		width: 60%;
+	}
+}
+#logoWrapper {
+	display: flex;
+	justify-content: space-between;
+	width: 95%;
+}
+.site-navigation{
+	background: $white;
+	@include breakpoint (laptopScreen) {
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+.scrollUp {
+		-webkit-transform: translateY(0);
+		        transform: translateY(0);
+		-webkit-transition: .3s ease;
+		transition: .3s ease;
+		@include breakpoint (laptopScreen) {
+			-webkit-transform: translateY(-165px);
+			        transform: translateY(-165px);
+		}
+}
+.custom-logo-link {
+ img {
+	 width: 150px;
+	 height: 100%;
+ }
+}
+.menu-main-menu-container {
+	width: 100%;
+	margin: 0 auto;
+	@include breakpoint (laptopScreen) {
+		width: 95%;
+	}
+	@include breakpoint (largeScreen) {
+		width: 60%;
+	}
+}
+.main-menu-wrapper {
+	ul {
+		padding: 0;
+	}
+}
+.main-menu {
+	display: none;
+	li {
+		list-style-type: none;
+		padding: 15px 5px;
+		border-bottom: 1px solid $lightGrey;
+		@include breakpoint (laptopScreen) {
+			padding: 10px 5px;
+			border-bottom: none;
+		}
+	}
+	a {
+		font-family: $roboto;
+		font-size: 20px;
+		font-weight: 700;
+		color: $brandColor;
+		padding: 20px;
+		text-decoration: none;
+	}
+	@include breakpoint (laptopScreen) {
+		display: flex;
+		flex-direction: row;
+		position: relative;
+		align-items: center;
+	}
+}
+.mobileMenuItem {
+	background: $black;
+	line-height: 1;
+	@include breakpoint (laptopScreen) {
+		display: none;
+	}
+	a {
+		color: $white !important;
+		padding: 0 10px;
+		font-size: 14px;
+	}
+}
+#closeMenu {
+	background-color: $brandColor;
+	color: $white;
+	padding: 10px;
+	@include breakpoint (laptopScreen) {
+		display: none;
+	}
+}
+#close {
+	margin: 0 10px;
+}
+.current-menu-item{
+	a {
+		position: relative;
+	}
+}
+.menuLinkWrap{
+	display: flex;
+  align-items: center;
+}
+.secondaryMenuWrap{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: reverse;
+	    -ms-flex-direction: column-reverse;
+	        flex-direction: column-reverse;
+	position: absolute;
+	top: 70px;
+	display: none;
+	-webkit-transition: 2.3s ease;
+	transition: 2.3s ease;
+	@include breakpoint (largeMobileScreen) {
+		top: 100px;
+	}
+	@include breakpoint (laptopScreen) {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: end;
+		    -ms-flex-pack: end;
+		        justify-content: flex-end;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		top: 0;
+		-webkit-transform: translateY(0);
+		        transform: translateY(0);
+		-webkit-transition: .3s ease;
+		transition: .3s ease;
+	}
+}
+.entry-header{
+	display:none;
+}
+nav{
+	width: 100%;
+}
+.menuText{
+	cursor: pointer;
+	font-family: $roboto;
+	font-size: 26px;
+	font-weight: 700;
+	padding-right: 5px;
+	color: $black;
+	text-decoration: none;
+	-webkit-transition: .3s ease-out all;
+	transition: .3s ease-out all;
+}
+.menuTextWrap{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: baseline;
+	    -ms-flex-align: baseline;
+	        align-items: baseline;
+	margin-left: 10px;
+	right: 100px;
+}
+.open{
+	display: flex !important;
+	flex-direction: column;
+	background: $white;
+	-webkit-transition: .1s ease-out all !important;
+	transition: .1s ease-out all !important;
+	border-bottom: 1px solid $lightGrey;
+}
+.menuButtonWrap{
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+		@include breakpoint(smallScreen){
+			padding: 15px 0 15px 15px;
+		}
+		@include breakpoint(laptopScreen){
+			display: none;
+		}
+}
+// Add Animation to our hamburger Menu
+.hamburger {
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition-property: opacity, -webkit-filter;
+  transition-property: opacity, -webkit-filter;
+  transition-property: opacity, filter;
+  transition-property: opacity, filter, -webkit-filter;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+	padding-top: 5px;
+}
+.hamburger:hover {
+  opacity: 0.7;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+}
+.hamburger.is-active:hover {
+  opacity: 0.7;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner:before,
+.hamburger.is-active .hamburger-inner:after {
+  background-color: $black;
+}
+
+.hamburger-box {
+  width: 30px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+.hamburger-inner, .hamburger-inner:before, .hamburger-inner:after {
+  width: 30px;
+  height: 3px;
+  background-color: $black;
+  border-radius: 4px;
+  position: absolute;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+.hamburger-inner:before, .hamburger-inner:after {
+  content: "";
+  display: block;
+}
+.hamburger-inner:before {
+  top: -10px;
+}
+.hamburger-inner:after {
+  bottom: -10px;
+}
+/*
+* Collapse
+*/
+.hamburger--collapse .hamburger-inner {
+  top: auto;
+  bottom: -2px;
+  -webkit-transition-duration: 0.13s;
+          transition-duration: 0.13s;
+  -webkit-transition-delay: 0.13s;
+          transition-delay: 0.13s;
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+          transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--collapse .hamburger-inner:after {
+  top: -20px;
+  -webkit-transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
+  transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
+}
+.hamburger--collapse .hamburger-inner:before {
+  -webkit-transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), -webkit-transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), -webkit-transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--collapse.is-active .hamburger-inner {
+  -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
+          transform: translate3d(0, -10px, 0) rotate(-45deg);
+  -webkit-transition-delay: 0.22s;
+          transition-delay: 0.22s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.hamburger--collapse.is-active .hamburger-inner:after {
+  top: 0;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  -webkit-transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear;
+  transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear;
+}
+.hamburger--collapse.is-active .hamburger-inner:before {
+  top: 0;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), -webkit-transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), -webkit-transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+}

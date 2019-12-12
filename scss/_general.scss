@@ -1,0 +1,51 @@
+/*--------------------------------------------------------------
+9.0 General/Global Styles
+--------------------------------------------------------------*/
+body{
+	background: $white;
+	margin: 0;
+}
+.site-content {
+	margin-top: 25px;
+	@include breakpoint (laptopScreen) {
+		margin-top: 150px;
+	}
+}
+.screen-reader-text{
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+// Style highlight to match our themes colors
+::-moz-selection{
+		background: rgba( 182, 174, 140, .5);
+		color: $white;
+}
+::selection{
+		background: rgba( 182, 174, 140, .5);
+		color: $white;
+}
+::-ms-selection{
+	background: rgba( 182, 174, 140, .5);
+	color: $white;
+}
+#privacyPolicy{
+	@include breakpoint(smallScreen){
+			margin-top: 110px;
+	}
+	@include breakpoint(largeMobileScreen){
+			margin-top: 125px;
+	}
+}
+ul {
+	padding: 15px;
+	margin: 0;
+}

@@ -1,0 +1,58 @@
+/*--------------------------------------------------------------
+13.0 Contact Page
+--------------------------------------------------------------*/
+.ginput_container {
+  input[type=text], textarea {
+    width: 100% !important;
+    box-shadow: 2px 2px 5px rgba(42, 42, 42, 0.3);
+    border: none;
+    background-color: $lightGrey;
+  }
+}
+.gform_footer {
+  input[type=submit] {
+    position: relative;
+  	z-index: 1;
+    font-family: $roboto;
+    font-size: 18px;
+  	font-weight: 700;
+    text-decoration: none;
+  	border: 2px solid $brandColor;
+  	border-radius: 10px;
+  	background: $brandColor;
+  	padding: 5px 25px 5px 25px;
+  	color: $white;
+  	-webkit-transition: .3s ease;
+  	transition: .3s ease;
+  	cursor: pointer;
+    white-space: nowrap;
+    box-shadow: 4px 4px 5px rgba(0,0,0,0.4);
+    &:hover{
+      background: $white;
+    	color: $brandColor;
+    	-webkit-transition: .3s ease;
+    	transition: .3s ease;
+    }
+  }
+}
+.gfield_label {
+  font-size: 18px !important;
+}
+#contact {
+  .col50 {
+    @include breakpoint (laptopScreen) {
+      padding-right: 20px;
+    }
+  }
+}
+.formWrapper{
+  padding: 20px;
+  border: 1px solid $lightGrey;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.smallMapWrapper {
+  @include breakpoint (laptopScreen) {
+    margin-top: -100px;
+  }
+}

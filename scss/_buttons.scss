@@ -1,0 +1,39 @@
+/*--------------------------------------------------------------
+8.0 Buttons
+--------------------------------------------------------------*/
+.primaryBtn{
+	position: relative;
+	z-index: 1;
+  font-family: $roboto;
+  font-size: 18px;
+	font-weight: 700;
+  text-decoration: none;
+	border: 2px solid $brandColor;
+	border-radius: 10px;
+	background: $brandColor;
+	padding: 5px 25px 5px 25px;
+	color: $white;
+	-webkit-transition: .3s ease;
+	transition: .3s ease;
+	cursor: pointer;
+  white-space: nowrap;
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  &:hover{
+    background: $white;
+  	color: $brandColor;
+  	-webkit-transition: .3s ease;
+  	transition: .3s ease;
+		box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+  }
+}
+.plainLink {
+	text-decoration: none;
+	color: $brandColor;
+	font-weight: 700;
+	-webkit-transition: .2s ease;
+	transition: .2s ease;
+}
+button{
+	background-color: $transparent;
+	border: none;
+}
