@@ -4,26 +4,33 @@
 .primaryBtn{
 	position: relative;
 	z-index: 1;
-  font-family: $roboto;
-  font-size: 18px;
+  font-family: $openSans;
+  font-size: 20px;
 	font-weight: 700;
   text-decoration: none;
-	border: 2px solid $brandColor;
-	border-radius: 10px;
-	background: $brandColor;
-	padding: 5px 25px 5px 25px;
-	color: $white;
+	background: rgba(255,255,255,.7);
+	padding: 10px 25px 10px 25px;
+	color: $brandColor;
 	-webkit-transition: .3s ease;
 	transition: .3s ease;
 	cursor: pointer;
   white-space: nowrap;
-	box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
+	&:after {
+		position: absolute;
+		content: "";
+		bottom: 0;
+		left: 0;
+		height: 5px;
+		width: 100%;
+		background-color: $accentColor;
+		-webkit-transition: .3s ease;
+		transition: .3s ease;
+	}
   &:hover{
-    background: $white;
-  	color: $brandColor;
+    background: $accentColor;
   	-webkit-transition: .3s ease;
   	transition: .3s ease;
-		box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
   }
 }
 .plainLink {
