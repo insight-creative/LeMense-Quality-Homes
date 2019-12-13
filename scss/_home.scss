@@ -1,3 +1,107 @@
 /*--------------------------------------------------------------
 11.0 Homepage
 --------------------------------------------------------------*/
+#home {
+  background-image: url("/wp-content/uploads/2019/12/lqh-ridgemont-kitchen.jpg");
+}
+.hero {
+  .headerOuterWrap{
+    position: absolute;
+    z-index: 4;
+    bottom: 40px;
+    text-align: center;
+    width: 95%;
+    h1 {
+      color: $white;
+      margin-bottom: 0;
+    }
+    p {
+      color: $white;
+      margin-bottom: 5px !important;
+    }
+  }
+  .shade {
+    opacity: 0;
+    background: rgba(0, 0, 0, .8);
+    z-index: 3;
+    position: fixed;
+    width: 100%;
+  }
+}
+.arrow {
+    animation: bounce 3s infinite cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes bounce {
+    0% {
+        transform: translate(0, 0px);
+        animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+    }
+    11% {
+        transform: translate(0, -2px);
+        animation-timing-function: cubic-bezier(.57, .01, .84, .5);
+    }
+    20% {
+        transform: translate(0, 0px);
+        animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+    }
+    28% {
+        transform: translate(0, -2px);
+        animation-timing-function: cubic-bezier(.57, .01, .84, .5);
+    }
+    36% {
+        transform: translate(0, 0px);
+        animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+    }
+    100% {
+        transform: translate(0, 0px);
+        animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+    }
+}
+.pageContentContainer {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  margin-top: calc(70vh + 90px);
+  background-color: $white;
+}
+#companyIntro {
+  h2 {
+    text-align: center;
+  }
+}
+.titleWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#aboutTheOwners {
+  .overlayBorder {
+    border: 1px solid $brandColor;
+    height: calc(100% - 30px);
+  }
+}
+#markShellyDesc{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -7px;
+  @include breakpoint (laptopScreen) {
+    margin-top: -250px;
+  }
+}
+.floorplanBack {
+  background-image: url("/wp-content/themes/insightcustom/images/floorplan-background.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+  padding: 50px 20px;
+  @include breakpoint (largeMobileScreen) {
+    padding: 50px;
+  }
+  h3, p {
+    color: $white;
+    margin-bottom: 0;
+  }
+}
+.borderedImage {
+  position: relative;
+}

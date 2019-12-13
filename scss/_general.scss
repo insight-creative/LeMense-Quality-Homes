@@ -4,18 +4,16 @@
 body{
 	background: $white;
 	margin: 0;
+	overflow-x: hidden;
 }
 .site-content {
-	margin-top: 25px;
-	@include breakpoint (laptopScreen) {
-		margin-top: 150px;
-	}
+	margin-top: 95px;
 }
 .screen-reader-text{
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
   -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
+  clip-path: inset(50%);
   height: 1px;
   margin: -1px;
   overflow: hidden;
@@ -26,15 +24,15 @@ body{
 }
 // Style highlight to match our themes colors
 ::-moz-selection{
-		background: rgba( 182, 174, 140, .5);
-		color: $white;
+	background: rgba(29, 43, 86, 0.7);
+	color: $white;
 }
 ::selection{
-		background: rgba( 182, 174, 140, .5);
-		color: $white;
+	background: rgba(29, 43, 86, 0.7);
+	color: $white;
 }
 ::-ms-selection{
-	background: rgba( 182, 174, 140, .5);
+	background: rgba(29, 43, 86, 0.7);
 	color: $white;
 }
 #privacyPolicy{
