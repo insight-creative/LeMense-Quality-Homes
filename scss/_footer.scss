@@ -68,7 +68,7 @@
 	}
 }
 #darkBlueBack {
-	background-image: url("/wp-content/themes/insightcustom/images/LQH-on-dark-background.jpg");
+	background-image: url("/wp-content/themes/insightcustom/images/lqh-dark-footer-background.jpg");
 	background-color: $brandColorDark;
 	background-size: cover;
 	background-position: bottom right;
@@ -116,7 +116,6 @@
 		}
 		a {
 			color: $brandColor;
-			margin-right: 5px;
 			transition: .2s ease;
 			&:hover {
 				text-decoration: none;

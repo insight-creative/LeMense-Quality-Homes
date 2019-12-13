@@ -1,7 +1,56 @@
 /*--------------------------------------------------------------
 8.0 Buttons
 --------------------------------------------------------------*/
+.btnWrap {
+	overflow: hidden;
+	padding: 10px 0;
+}
 .primaryBtn{
+	position: relative;
+	z-index: 1;
+  font-family: $openSans;
+  font-size: 20px;
+	font-weight: 700;
+  text-decoration: none;
+	background: $brandColor;
+	padding: 10px 25px 10px 25px;
+	color: $white;
+	-webkit-transition: .3s ease;
+	transition: .3s ease;
+	cursor: pointer;
+  white-space: nowrap;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
+	&:after {
+		position: absolute;
+		content: "";
+		bottom: 0;
+		left: 0;
+		height: 5px;
+		width: 100%;
+		background-color: $accentColor;
+		-webkit-transition: .3s ease;
+		transition: .3s ease;
+	}
+  &:hover{
+  	-webkit-transition: .3s ease;
+  	transition: .3s ease;
+		&:after {
+			height: 100%;
+		}
+  }
+	span {
+		position: absolute;
+    z-index: 1;
+    bottom: 0;
+		left: 0;
+    width: 100%;
+    text-align: center;
+    transition: transform .5s ease;
+		color: $white;
+    transform: translateY(-10px);
+	}
+}
+.primaryBtnAlt{
 	position: relative;
 	z-index: 1;
   font-family: $openSans;
@@ -28,10 +77,27 @@
 		transition: .3s ease;
 	}
   &:hover{
-    background: $accentColor;
   	-webkit-transition: .3s ease;
   	transition: .3s ease;
+		&:after {
+			height: 100%;
+		}
   }
+	span {
+		position: absolute;
+    z-index: 1;
+    bottom: 0;
+		left: 0;
+    width: 100%;
+    text-align: center;
+    transition: transform .5s ease;
+		color: $brandColor;
+    transform: translateY(-10px);
+	}
+}
+.centerBtn {
+	text-align: center;
+	margin-top: 15px;
 }
 .plainLink {
 	text-decoration: none;

@@ -37,26 +37,163 @@ get_header();
 					</div>
 				</section>
 				<section id="aboutTheOwners" class="row">
-					<div class="col80 borderedImage">
+					<div class="col80 borderedImage wideImage">
 						<?php
-				        $image = get_field('shelly_and_mark');
-				        $imageID = $image['ID'];
-				        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'image logo', 'data-sizes' => 'auto' ) );
-				      ?>
+			        $image = get_field('shelly_and_mark');
+			        $imageID = $image['ID'];
+			        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'image logo', 'data-sizes' => 'auto' ) );
+			      ?>
 						<div class="overlayBorderOuter">
 							<div class="overlayBorder"></div>
 						</div>
 					</div>
 					<div id="markShellyDesc" data-aos="fade-up">
 						<div class="col50">
-							<div class="floorplanBack blockText">
+							<div class="blueBack blockText">
 								<h3 class="largeHeading">Local Expertise</h3>
 								<div class="underline"></div>
 								<p>
 									Mark and Shelly LeMense are the dream team to create your dream home! Mark’s hands-on expertise, Shelly’s keen eye for detail, decades of combined experience—plus a local reputation for excellence—make them your ultimate building partners.
 								</p>
 								<div class="btnWrap">
-									<a href="/about-us/" class="primaryBtn">Learn More About Us</a>
+									<a href="/about-us/" class="primaryBtnAlt">Learn More About Us<span>Learn More About Us</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section id="services"class="row">
+					<div class="drywallBack paddedSection">
+						<h3 class="largeHeading centerText">All-inclusive Services</h3>
+						<div class="pageWidth servicesContainer" data-aos="fade-up">
+							<div class="serviceWrapper">
+								<a href="/services/custom-building/">
+									<div class="serviceWrapperInner">
+										<h4>Custom Building</h4>
+										<p>
+											Let us guide you every step of the way to build the perfect home outfitted for your family’s unique needs.
+										</p>
+										<p>Learn More <?php get_template_part("/inc/svg-icons/arrow-right"); ?></p>
+									</div>
+								</a>
+							</div>
+							<div class="serviceWrapper">
+								<a href="/services/interior-design/">
+									<div class="serviceWrapperInner">
+										<h4>Interior Design</h4>
+										<p>
+											Included with your building plans, our interior designer can help you make decisions and achieve the stunning cohesive home in your mind.
+										</p>
+										<p>Learn More <?php get_template_part("/inc/svg-icons/arrow-right"); ?></p>
+									</div>
+								</a>
+							</div>
+							<div class="serviceWrapper">
+								<a href="/services/licensed-realty/">
+									<div class="serviceWrapperInner">
+										<h4>Licensed Realty</h4>
+										<p>
+											By timing the sale of your existing home with the completion of your new home, our on-staff realtor has the ability to make your
+											move seamless.
+										</p>
+										<p>Learn More <?php get_template_part("/inc/svg-icons/arrow-right"); ?></p>
+									</div>
+								</a>
+							</div>
+							<div class="serviceWrapper">
+								<a href="/services/remodeling/">
+									<div class="serviceWrapperInner">
+										<h4>Remodeling</h4>
+										<p>
+											Whether you have an unfinished basement or other area in need of an update, our crew can bring their experience and talents to your existing home.
+										</p>
+										<p>Learn More <?php get_template_part("/inc/svg-icons/arrow-right"); ?></p>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section id="recentWork" class="row">
+					<h5 class="largeHeading centerText">Recent Work</h5>
+					<div class="workContainer">
+						<div class="recentWorkWrap borderedImage" data-aos="fade-up">
+							<?php
+				        $image = get_field('featured_work_1');
+				        $imageID = $image['ID'];
+				        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'image logo', 'data-sizes' => 'auto' ) );
+				      ?>
+							<div class="overlayBorderOuter">
+								<div class="overlayBorder"></div>
+							</div>
+						</div>
+						<div class="recentWorkWrap borderedImage" data-aos="fade-up">
+							<?php
+				        $image = get_field('featured_work_2');
+				        $imageID = $image['ID'];
+				        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'image logo', 'data-sizes' => 'auto' ) );
+				      ?>
+							<div class="overlayBorderOuter">
+								<div class="overlayBorder"></div>
+							</div>
+						</div>
+						<div class="recentWorkWrap borderedImage" data-aos="fade-up">
+							<?php
+				        $image = get_field('featured_work_3');
+				        $imageID = $image['ID'];
+				        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'image logo', 'data-sizes' => 'auto' ) );
+				      ?>
+							<div class="overlayBorderOuter">
+								<div class="overlayBorder"></div>
+							</div>
+						</div>
+						<div class="recentWorkWrap borderedImage" data-aos="fade-up">
+							<?php
+				        $image = get_field('featured_work_4');
+				        $imageID = $image['ID'];
+				        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'image logo', 'data-sizes' => 'auto' ) );
+				      ?>
+							<div class="overlayBorderOuter">
+								<div class="overlayBorder"></div>
+							</div>
+						</div>
+					</div>
+					<div class="centerBtn">
+						<div class="btnWrap">
+							<a href="/about-us/" class="primaryBtn">View More of Our Work<span>View More of Our Work</span></a>
+						</div>
+					</div>
+				</section>
+				<section id="testimonial" class="row">
+					<div class="drywallBack testimonialWrapper paddedSection">
+						<div class="pageWidth">
+							<?php get_template_part("/inc/slider/testimonial-slider"); ?>
+						</div>
+					</div>
+				</section>
+				<section id="floorPlans" class="row">
+					<div class="flexRight">
+						<div class="col80 borderedImage wideImage">
+							<?php
+				        $image = get_field('floorplans_image');
+				        $imageID = $image['ID'];
+				        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'image logo', 'data-sizes' => 'auto' ) );
+				      ?>
+							<div class="overlayBorderOuter">
+								<div class="overlayBorder"></div>
+							</div>
+						</div>
+					</div>
+					<div id="floorPlanDesc" data-aos="fade-up">
+						<div class="col50">
+							<div class="blueBack blockText">
+								<h3 class="largeHeading">Build Inspiration</h3>
+								<div class="underline"></div>
+								<p>
+									The building process can seem overwhelming at first. Our exclusive library of diverse floor plans will provide the inspiration you need to get started!
+								</p>
+								<div class="btnWrap">
+									<a href="/floor-plans/" class="primaryBtnAlt">View our Floor Plans<span>View our Floor Plans</span></a>
 								</div>
 							</div>
 						</div>
@@ -64,106 +201,6 @@ get_header();
 				</section>
 			</div>
 		</div>
-		<?php
-		// check if the flexible content field has rows of data
-		if( have_rows('flexible_fields') ):
-	    // loop through the rows of data
-	    while ( have_rows('flexible_fields') ) : the_row();
-				///////////////////////////////////
-				// Simple Two Column Block
-				//////////////////////////////////
-				if( get_row_layout() == 'two_column' ):
-					?>
-					<section id="<?php echo get_sub_field('section_name'); ?>" class="paddedSection">
-						<?php
-						$col_1 = get_sub_field('col_content_1');
-						$col_2 = get_sub_field('col_content_2');
-						?>
-						<div class="pageWidth flexContainer centerAlignedContainer">
-							<?php
-							if( $col_1 ): ?>
-								<div class="col50">
-									<div class="blockText">
-										<?php echo $col_1 ?>
-									</div>
-								</div>
-							<?php endif;
-							if( $col_2 ): ?>
-								<div class="col50">
-									<div class="blockText">
-										<?php echo $col_2 ?>
-									</div>
-								</div>
-							<?php
-							endif;
-							?>
-						</div>
-					</section>
-					<?php
-					///////////////////////////////////
-					// Simple Three Column Block
-					//////////////////////////////////
-					elseif( get_row_layout() == 'three_column' ):
-					?>
-					<section id="<?php echo get_sub_field('section_name'); ?>" class="paddedSection">
-					<?php
-					if(get_sub_field('section_title')):
-					?>
-					<div class="pageWidth">
-		        <?php echo get_sub_field('section_title'); ?>
-		      </div>
-					<?php endif; ?>
-						<?php
-							$col_1 = get_sub_field('col_content_1');
-							$col_2 = get_sub_field('col_content_2');
-							$col_3 = get_sub_field('col_content_3');
-						?>
-						<div class="pageWidth flexContainer">
-						<?php
-							if( $col_1 ): ?>
-								<div class="col30">
-									<div class="blockText">
-										<?php echo $col_1 ?>
-									</div>
-								</div>
-							<?php endif;
-							if( $col_2 ): ?>
-								<div class="col30">
-									<div class="blockText">
-										<?php echo $col_2 ?>
-									</div>
-								</div>
-							<?php endif;
-							if( $col_3 ): ?>
-								<div class="col30">
-									<div class="blockText">
-										<?php echo $col_3 ?>
-									</div>
-								</div>
-							<?php
-							endif;
-							?>
-						</div>
-					</section>
-					<?php
-					///////////////////////////////////
-					// Testimonial
-					//////////////////////////////////
-					elseif( get_row_layout() == 'testimonial' ):
-					$testimonial = get_sub_field('testimonial_contents');
-					?>
-					<section id="<?php echo get_sub_field('section_name'); ?>" class="paddedSection testimonial">
-					  <div class="limitWidth">
-					    <div class="blockText greenBorder centerText">
-								<?php echo $testimonial ?>
-							</div>
-					  </div>
-					</section>
-					<?php
-				endif;
-			endwhile;
-		endif;
-		?>
 	</main>
 </div>
 <?php

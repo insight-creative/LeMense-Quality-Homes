@@ -16,7 +16,9 @@
 								3609 Glen Oaks Pass<br>
 								Green Bay, WI 54311
 							</p>
-							<a href="tel:920-609-3575">(920) 609-3575</a>
+							<p>
+								<a href="tel:920-609-3575">(920) 609-3575</a>
+							</p>
 						</div>
 					</div>
 					<div id="darkBlueBack" class="col50">
@@ -45,12 +47,27 @@
 	 <div id="footerSecond">
 		 <div class="navWidth">
 		 		<?php get_template_part("/inc/footer/copyright"); ?>
-			</div>
+		 </div>
 	 </div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 <script>
 	AOS.init();
+	var swiper2 = new Swiper('.swiper2', {
+		loop: true,
+		slidesPerView: 1,
+    spaceBetween: 30,
+		centeredSlides: true,
+		effect: 'fade',
+		pagination: {
+      el: '.swiper-pagination2',
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
 </script>
 <?php wp_footer(); ?>
 </body>

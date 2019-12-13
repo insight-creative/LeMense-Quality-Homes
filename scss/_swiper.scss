@@ -1,0 +1,102 @@
+.swiper-container-outer {
+  position: relative;
+  max-width: 1300px;
+  margin: 0 auto;
+  &:before {
+    position: absolute;
+    z-index: 3;
+    top: 70px;
+    left: -25px;
+    font-family: $montserrat;
+    font-size: 350px;
+    color: $brandColor;
+    content: '\201c';
+    @include breakpoint (laptopScreen) {
+      top: 130px;
+      left: -50px;
+      font-size: 450px;
+    }
+  }
+  &:after {
+    position: absolute;
+    z-index: 2;
+    top: 80px;
+    left: -20px;
+    font-family: $montserrat;
+    font-size: 350px;
+    color: $accentColor;
+    content: '\201c';
+    @include breakpoint (laptopScreen) {
+      top: 120px;
+      left: -40px;
+      font-size: 450px;
+    }
+  }
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  max-width: 1300px;
+  color: $darkGrey !important;
+  background: $white;
+  height: 500px !important;
+  background-image: url("/wp-content/uploads/2019/12/LQH-white-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Center slide text vertically */
+  cursor: -webkit-grab;
+  cursor: grab;
+  overflow: hidden;
+  @include breakpoint (laptopScreen) {
+    height: 400px !important;
+  }
+}
+.swiperNavigationOuter {
+  display: flex;
+  justify-content: center;
+  .swiper-navigation {
+    position: absolute;
+    z-index: 1;
+    height: 75px;
+    width: 50%;
+    bottom: 5px;
+    display: flex;
+    align-items: center;
+    @include breakpoint (laptopScreen) {
+      width: 15%;
+    }
+  }
+}
+.swiper-button-next, .swiper-button-prev {
+  color: $brandColor !important;
+}
+.swiper-pagination {
+  bottom: auto !important;
+  z-index: 2 !important;
+}
+.swiper-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border-left: 1px solid $lightGrey;
+  border-top: 4px solid $brandColor;
+  border-right: 1px solid $lightGrey;
+  border-bottom: 1px solid $lightGrey;
+  text-align: left;
+}
+.swiper-content-inner {
+  padding: 20px;
+  .underline {
+    margin: 0 auto;
+  }
+  h6 {
+    margin-top: 15px;
+  }
+}

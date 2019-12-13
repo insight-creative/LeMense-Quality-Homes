@@ -1,4 +1,4 @@
-<svg class="footerSocialIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg class="smallIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <symbol id="icon-arrow-right" viewBox="0 0 24 24">
       <title>Arrow Right</title>
@@ -6,4 +6,4 @@
     </symbol>
   </defs>
 </svg>
-<svg class="footerSocialIcon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg>
+<svg class="arrowRight icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg>

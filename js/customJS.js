@@ -34,7 +34,7 @@ $(function() {
 });
 // Fade out hero title on scroll
 $(window).scroll(function(){
-    $(".headerOuterWrap").css("opacity", 1 - $(window).scrollTop() / 350);
+    $(".headerOuterWrap").css("opacity", 1 - $(window).scrollTop() / 250);
   });
 // detect IE and display an error message prompting users to upgrade to a modern browser
 if (navigator.appName == 'Microsoft Internet Explorer' || !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/))) {

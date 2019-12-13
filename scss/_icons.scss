@@ -8,6 +8,15 @@
   width: 20px;
   margin: 0 auto;
 }
+.arrowRight {
+  position: relative;
+  top: 3px;
+  fill: $brandColor;
+  stroke: $brandColor;
+  height: 20px;
+  width: 20px;
+  transition: .2s ease;
+}
 .footerSocialIcon{
 	stroke: $black;
   fill: $black;

@@ -20,49 +20,86 @@
       margin-bottom: 5px !important;
     }
   }
-  .shade {
-    opacity: 0;
-    background: rgba(0, 0, 0, .8);
-    z-index: 3;
-    position: fixed;
-    width: 100%;
+  .overlayBorder {
+    border: 1px solid $white;
+    height: calc(100% - 20px);
   }
 }
 .arrow {
-    animation: bounce 3s infinite cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-animation: bounce 3s infinite cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: bounce 3s infinite cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        transform: translate(0, 0px);
+        -webkit-animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+                animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+    }
+    11% {
+        transform: translate(0, -2px);
+        -webkit-animation-timing-function: cubic-bezier(.57, .01, .84, .5);
+                animation-timing-function: cubic-bezier(.57, .01, .84, .5);
+    }
+    20% {
+        transform: translate(0, 0px);
+        -webkit-animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+                animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+    }
+    28% {
+        transform: translate(0, -2px);
+        -webkit-animation-timing-function: cubic-bezier(.57, .01, .84, .5);
+                animation-timing-function: cubic-bezier(.57, .01, .84, .5);
+    }
+    36% {
+        transform: translate(0, 0px);
+        -webkit-animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+                animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+    }
+    100% {
+        transform: translate(0, 0px);
+        -webkit-animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+                animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+    }
 }
 
 @keyframes bounce {
     0% {
         transform: translate(0, 0px);
-        animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+        -webkit-animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+                animation-timing-function: cubic-bezier(.19, .28, .27, 1);
     }
     11% {
         transform: translate(0, -2px);
-        animation-timing-function: cubic-bezier(.57, .01, .84, .5);
+        -webkit-animation-timing-function: cubic-bezier(.57, .01, .84, .5);
+                animation-timing-function: cubic-bezier(.57, .01, .84, .5);
     }
     20% {
         transform: translate(0, 0px);
-        animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+        -webkit-animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+                animation-timing-function: cubic-bezier(.19, .28, .27, 1);
     }
     28% {
         transform: translate(0, -2px);
-        animation-timing-function: cubic-bezier(.57, .01, .84, .5);
+        -webkit-animation-timing-function: cubic-bezier(.57, .01, .84, .5);
+                animation-timing-function: cubic-bezier(.57, .01, .84, .5);
     }
     36% {
         transform: translate(0, 0px);
-        animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+        -webkit-animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+                animation-timing-function: cubic-bezier(.19, .28, .27, 1);
     }
     100% {
         transform: translate(0, 0px);
-        animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+        -webkit-animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+                animation-timing-function: cubic-bezier(.19, .28, .27, 1);
     }
 }
 .pageContentContainer {
   position: relative;
   z-index: 5;
   width: 100%;
-  margin-top: calc(70vh + 90px);
+  margin-top: calc(70vh + 100px);
   background-color: $white;
 }
 #companyIntro {
@@ -81,21 +118,32 @@
     height: calc(100% - 30px);
   }
 }
+.wideImage {
+  @include breakpoint (megaScreen) {
+    width: 60%;
+  }
+}
 #markShellyDesc{
   display: flex;
   justify-content: flex-end;
-  margin-top: -7px;
-  @include breakpoint (laptopScreen) {
-    margin-top: -250px;
-  }
 }
-.floorplanBack {
-  background-image: url("/wp-content/themes/insightcustom/images/floorplan-background.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
+#floorPlanDesc {
+  display: flex;
+  justify-content: flex-start;
+}
+.blueBack {
+  background-color: $brandColor;
   padding: 50px 20px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
+  margin-top: -7px;
   @include breakpoint (largeMobileScreen) {
     padding: 50px;
+  }
+  @include breakpoint (laptopScreen) {
+    margin-top: -350px;
+  }
+  @include breakpoint (largeScreen) {
+    padding: 100px;
   }
   h3, p {
     color: $white;
@@ -104,4 +152,135 @@
 }
 .borderedImage {
   position: relative;
+}
+.servicesContainer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
+  background-image: url("/wp-content/uploads/2019/12/kitchen-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  &:after{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: rgba(29, 43, 86, .7);
+  }
+  .serviceWrapper {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    background-color: $white;
+    transition: .2s ease;
+    @include breakpoint (tabletScreen) {
+      width: 50%;
+    }
+    .serviceWrapperInner {
+      padding: 20px;
+      @include breakpoint (largeScreen) {
+        padding: 50px;
+      }
+    }
+    &:hover {
+      background-color: rgba(0,0,0,0);
+      transition: .2s ease;
+      h4, p {
+        color: $white;
+        transition: .2s ease;
+      }
+      p:nth-child(2) {
+        color: $white;
+        transition: .2s ease;
+      }
+      .arrowRight {
+        fill: $white;
+        stroke: $white;
+        margin-left: 5px;
+        transition: .2s ease;
+      }
+    }
+    a {
+      color: $brandColor;
+      text-decoration: none;
+      p:nth-child(2) {
+        color: $darkGrey;
+      }
+      p:nth-child(3) {
+        font-weight: 700;
+      }
+    }
+  }
+  .serviceWrapper:nth-child(1) {
+    @include breakpoint (tabletScreen) {
+      top: -1px;
+      left: -1px;
+    }
+  }
+  .serviceWrapper:nth-child(2) {
+    @include breakpoint (tabletScreen) {
+      top: -1px;
+      right: -1px;
+    }
+  }
+  .serviceWrapper:nth-child(3) {
+    @include breakpoint (tabletScreen) {
+      bottom: -1px;
+      left: -1px;
+    }
+  }
+  .serviceWrapper:nth-child(4) {
+    @include breakpoint (tabletScreen) {
+      bottom: -1px;
+      right: -1px;
+    }
+  }
+}
+.workContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  @include breakpoint (tabletScreen) {
+    justify-content: space-around;
+  }
+  @include breakpoint (laptopScreen) {
+    justify-content: space-between;
+  }
+  .recentWorkWrap {
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    @include breakpoint (laptopScreen) {
+      height: 200px;
+      width: 200px;
+      margin-bottom: 0;
+    }
+    @include breakpoint (largeScreen) {
+      width: 300px;
+      height: 300px;
+    }
+    @include breakpoint (megaScreen) {
+      width: 450px;
+      height: 450px;
+    }
+    .overlayBorder {
+      height: calc(100% - 20px);
+    }
+  }
+  .recentWorkWrap:nth-child(even) {
+    @include breakpoint (largeScreen) {
+      margin-top: 100px;
+    }
+  }
+}
+.flexRight {
+  display: flex;
+  justify-content: flex-end;
 }
