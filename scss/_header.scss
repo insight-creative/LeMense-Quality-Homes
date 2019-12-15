@@ -251,6 +251,11 @@
 				}
 			}
 		}
+		.current_page_item {
+			a {
+				color: $accentColor;
+			}
+		}
 	}
 }
 .mobileMenuItem {
@@ -279,6 +284,7 @@
 }
 .current-menu-item{
 	a {
+		color: $accentColor;
 		position: relative;
 	}
 }

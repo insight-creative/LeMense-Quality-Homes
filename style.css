@@ -846,6 +846,8 @@ Font Variables
         .subNav ul li a:hover {
           color: #CC9F5B;
           transition: .2s ease; }
+    .subNav ul .current_page_item a {
+      color: #CC9F5B; }
 
 .mobileMenuItem {
   background: #303030;
@@ -871,6 +873,7 @@ Font Variables
   margin: 0 10px; }
 
 .current-menu-item a {
+  color: #CC9F5B;
   position: relative; }
 
 .entry-header {
@@ -1231,6 +1234,8 @@ p {
     transition: .3s ease; }
     .primaryBtn:hover:after {
       height: 100%; }
+    .primaryBtn:hover span {
+      opacity: 1; }
   .primaryBtn span {
     position: absolute;
     z-index: 1;
@@ -1240,7 +1245,8 @@ p {
     text-align: center;
     transition: transform .5s ease;
     color: #FFFFFF;
-    transform: translateY(-10px); }
+    transform: translateY(-9px);
+    opacity: 0; }
 
 .primaryBtnAlt {
   position: relative;
@@ -1272,6 +1278,8 @@ p {
     transition: .3s ease; }
     .primaryBtnAlt:hover:after {
       height: 100%; }
+    .primaryBtnAlt:hover span {
+      opacity: 1; }
   .primaryBtnAlt span {
     position: absolute;
     z-index: 1;
@@ -1281,7 +1289,8 @@ p {
     text-align: center;
     transition: transform .5s ease;
     color: #1D2B56;
-    transform: translateY(-10px); }
+    transform: translateY(-9px);
+    opacity: 0; }
 
 .centerBtn {
   text-align: center;
@@ -1498,7 +1507,7 @@ ul {
   border: 1px solid #1D2B56;
   height: calc(100% - 30px); }
 
-@media (min-width: 2000px) {
+@media (min-width: 1600px) {
   .wideImage {
     width: 60%; } }
 
@@ -1619,20 +1628,24 @@ ul {
     margin-bottom: 15px; }
     @media (min-width: 992px) {
       .workContainer .recentWorkWrap {
-        height: 200px;
-        width: 200px;
+        height: 225px;
+        width: 225px;
         margin-bottom: 0; } }
     @media (min-width: 1400px) {
       .workContainer .recentWorkWrap {
         width: 300px;
         height: 300px; } }
+    @media (min-width: 1600px) {
+      .workContainer .recentWorkWrap {
+        width: 350px;
+        height: 350px; } }
     @media (min-width: 2000px) {
       .workContainer .recentWorkWrap {
         width: 450px;
         height: 450px; } }
     .workContainer .recentWorkWrap .overlayBorder {
       height: calc(100% - 20px); }
-  @media (min-width: 1400px) {
+  @media (min-width: 992px) {
     .workContainer .recentWorkWrap:nth-child(even) {
       margin-top: 100px; } }
 
