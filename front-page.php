@@ -7,14 +7,14 @@ get_header();
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
 		<a id="main-content" tabindex="-1"></a>
-		<section id="home" class="hero">
+		<section id="home" class="hero" data-aos="fade-in" data-aos-duration="1500">
 			<div class="heroOverlay">
 				<div class="overlayBorderOuter">
 					<div class="overlayBorder"></div>
 				</div>
 			</div>
 			<div class="headerOuterWrap">
-				<div class="headerInnerWrap">
+				<div class="headerInnerWrap" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="500">
 					<h1>Quality Custom Home Building</h1>
 					<p class="smallHeading">In Green Bay, WI</p>
 					<div class="arrow">
@@ -25,7 +25,7 @@ get_header();
 		</section>
 		<div class="pageContentContainer">
 			<div class="navWidth">
-				<section id="companyIntro" class="paddedSection">
+				<section id="companyIntro" class="paddedSection" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="1000">
 					<div class="drywallBack paddedSection">
 						<div class="titleWrap">
 							<h2>A Better Building Process</h2>
@@ -47,7 +47,7 @@ get_header();
 							<div class="overlayBorder"></div>
 						</div>
 					</div>
-					<div id="markShellyDesc" data-aos="fade-up">
+					<div id="markShellyDesc" data-aos="fade-in" data-aos-offset="-350">
 						<div class="col50">
 							<div class="blueBack blockText">
 								<h3 class="largeHeading">Local Expertise</h3>
@@ -65,7 +65,7 @@ get_header();
 				<section id="services"class="row">
 					<div class="drywallBack paddedSection">
 						<h3 class="largeHeading centerText">All-inclusive Services</h3>
-						<div class="pageWidth servicesContainer" data-aos="fade-up">
+						<div class="pageWidth servicesContainer" data-aos="fade-in">
 							<div class="serviceWrapper">
 								<a href="/services/custom-building/">
 									<div class="serviceWrapperInner">
@@ -117,7 +117,7 @@ get_header();
 				<section id="recentWork" class="row">
 					<h5 class="largeHeading centerText">Recent Work</h5>
 					<div class="workContainer">
-						<div class="recentWorkWrap borderedImage" data-aos="fade-up">
+						<div class="recentWorkWrap borderedImage" data-aos="fade-in">
 							<?php
 				        $image = get_field('featured_work_1');
 				        $imageID = $image['ID'];
@@ -127,7 +127,7 @@ get_header();
 								<div class="overlayBorder"></div>
 							</div>
 						</div>
-						<div class="recentWorkWrap borderedImage" data-aos="fade-up">
+						<div class="recentWorkWrap borderedImage" data-aos="fade-in">
 							<?php
 				        $image = get_field('featured_work_2');
 				        $imageID = $image['ID'];
@@ -137,7 +137,7 @@ get_header();
 								<div class="overlayBorder"></div>
 							</div>
 						</div>
-						<div class="recentWorkWrap borderedImage" data-aos="fade-up">
+						<div class="recentWorkWrap borderedImage" data-aos="fade-in">
 							<?php
 				        $image = get_field('featured_work_3');
 				        $imageID = $image['ID'];
@@ -147,7 +147,7 @@ get_header();
 								<div class="overlayBorder"></div>
 							</div>
 						</div>
-						<div class="recentWorkWrap borderedImage" data-aos="fade-up">
+						<div class="recentWorkWrap borderedImage" data-aos="fade-in">
 							<?php
 				        $image = get_field('featured_work_4');
 				        $imageID = $image['ID'];
@@ -184,7 +184,7 @@ get_header();
 							</div>
 						</div>
 					</div>
-					<div id="floorPlanDesc" data-aos="fade-up">
+					<div id="floorPlanDesc" data-aos="fade-in" data-aos-offset="-350">
 						<div class="col50">
 							<div class="blueBack blockText">
 								<h3 class="largeHeading">Build Inspiration</h3>
