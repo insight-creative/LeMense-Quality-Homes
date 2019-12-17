@@ -7,7 +7,8 @@ get_header();
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
 		<a id="main-content" tabindex="-1"></a>
-		<section id="home" class="hero" data-aos="fade-in" data-aos-duration="1500">
+		<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
+		<section class="hero" data-aos="fade-in" data-aos-duration="1500" style="background: url('<?php echo $backgroundImg[0]; ?>') no-repeat; background-size: cover; background-position:center;">
 			<div class="heroOverlay">
 				<div class="overlayBorderOuter">
 					<div class="overlayBorder"></div>
@@ -41,7 +42,7 @@ get_header();
 						<?php
 			        $image = get_field('shelly_and_mark');
 			        $imageID = $image['ID'];
-			        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'image logo', 'data-sizes' => 'auto' ) );
+			        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'blockImage logo', 'data-sizes' => 'auto' ) );
 			      ?>
 						<div class="overlayBorderOuter">
 							<div class="overlayBorder"></div>
@@ -73,7 +74,7 @@ get_header();
 										<p>
 											Let us guide you every step of the way to build the perfect home outfitted for your family’s unique needs.
 										</p>
-										<p>Learn More <?php get_template_part("/inc/svg-icons/arrow-right"); ?></p>
+										<p>LEARN MORE <?php get_template_part("/inc/svg-icons/arrow-right"); ?></p>
 									</div>
 								</a>
 							</div>
@@ -84,7 +85,7 @@ get_header();
 										<p>
 											Included with your building plans, our interior designer can help you make decisions and achieve the stunning cohesive home in your mind.
 										</p>
-										<p>Learn More <?php get_template_part("/inc/svg-icons/arrow-right"); ?></p>
+										<p>LEARN MORE <?php get_template_part("/inc/svg-icons/arrow-right"); ?></p>
 									</div>
 								</a>
 							</div>
@@ -96,7 +97,7 @@ get_header();
 											By timing the sale of your existing home with the completion of your new home, our on-staff realtor has the ability to make your
 											move seamless.
 										</p>
-										<p>Learn More <?php get_template_part("/inc/svg-icons/arrow-right"); ?></p>
+										<p>LEARN MORE <?php get_template_part("/inc/svg-icons/arrow-right"); ?></p>
 									</div>
 								</a>
 							</div>
@@ -107,7 +108,7 @@ get_header();
 										<p>
 											Whether you have an unfinished basement or other area in need of an update, our crew can bring their experience and talents to your existing home.
 										</p>
-										<p>Learn More <?php get_template_part("/inc/svg-icons/arrow-right"); ?></p>
+										<p>LEARN MORE <?php get_template_part("/inc/svg-icons/arrow-right"); ?></p>
 									</div>
 								</a>
 							</div>
@@ -121,7 +122,7 @@ get_header();
 							<?php
 				        $image = get_field('featured_work_1');
 				        $imageID = $image['ID'];
-				        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'image logo', 'data-sizes' => 'auto' ) );
+				        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'blockImage logo', 'data-sizes' => 'auto' ) );
 				      ?>
 							<div class="overlayBorderOuter">
 								<div class="overlayBorder"></div>
@@ -131,7 +132,7 @@ get_header();
 							<?php
 				        $image = get_field('featured_work_2');
 				        $imageID = $image['ID'];
-				        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'image logo', 'data-sizes' => 'auto' ) );
+				        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'blockImage logo', 'data-sizes' => 'auto' ) );
 				      ?>
 							<div class="overlayBorderOuter">
 								<div class="overlayBorder"></div>
@@ -141,7 +142,7 @@ get_header();
 							<?php
 				        $image = get_field('featured_work_3');
 				        $imageID = $image['ID'];
-				        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'image logo', 'data-sizes' => 'auto' ) );
+				        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'blockImage logo', 'data-sizes' => 'auto' ) );
 				      ?>
 							<div class="overlayBorderOuter">
 								<div class="overlayBorder"></div>
@@ -151,7 +152,7 @@ get_header();
 							<?php
 				        $image = get_field('featured_work_4');
 				        $imageID = $image['ID'];
-				        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'image logo', 'data-sizes' => 'auto' ) );
+				        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'blockImage logo', 'data-sizes' => 'auto' ) );
 				      ?>
 							<div class="overlayBorderOuter">
 								<div class="overlayBorder"></div>
@@ -160,7 +161,7 @@ get_header();
 					</div>
 					<div class="centerBtn">
 						<div class="btnWrap">
-							<a href="/about-us/" class="primaryBtn">View More of Our Work<span>View More of Our Work</span></a>
+							<a href="/gallery/" class="primaryBtn">View More of Our Work<span>View More of Our Work</span></a>
 						</div>
 					</div>
 				</section>
@@ -177,7 +178,7 @@ get_header();
 							<?php
 				        $image = get_field('floorplans_image');
 				        $imageID = $image['ID'];
-				        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'image logo', 'data-sizes' => 'auto' ) );
+				        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'blockImage logo', 'data-sizes' => 'auto' ) );
 				      ?>
 							<div class="overlayBorderOuter">
 								<div class="overlayBorder"></div>

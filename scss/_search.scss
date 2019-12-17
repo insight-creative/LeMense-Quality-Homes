@@ -2,13 +2,13 @@
   position: relative;
   height: 20px;
   width: 20px;
-  padding: 10px 10px 0 10px;
+  padding: 10px 0 0 10px;
 }
 #searchFormWrap {
   text-align: center;
   padding: 10px;
   display: none;
-  background: $black;
+  background: $brandColor;
   form {
     display: flex;
     flex-direction: row;
@@ -18,24 +18,24 @@
   }
   input {
     width: 100%;
-    background-color: $darkGrey;
-    border: 1px solid $darkGrey;
+    background-color: $white;
+    border: 1px solid $white;
     padding: 10px;
   }
   input::-webkit-input-placeholder {
-    color: $white;
+    color: $brandColor;
   }
   input::-moz-placeholder {
-    color: $white;
+    color: $brandColor;
   }
   input:-ms-input-placeholder {
-    color: $white;
+    color: $brandColor;
   }
   input::-ms-input-placeholder {
-    color: $white;
+    color: $brandColor;
   }
   input::placeholder {
-    color: $white;
+    color: $brandColor;
   }
 }
 #mobileSearch {
@@ -90,8 +90,6 @@
   display: block !important;
 }
 #search {
-  padding: 0 10px;
-  height: 100%;
   i {
     position: absolute;
     top: 3px;
@@ -167,5 +165,10 @@
   .icon-search {
     opacity: 0;
     transition: opacity .3s;
+  }
+}
+.search-form {
+  .search-submit {
+    position: relative;
   }
 }

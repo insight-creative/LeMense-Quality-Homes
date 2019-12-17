@@ -69,6 +69,8 @@
     },
   });
 </script>
+<script src="/wp-content/themes/insightcustom/js/jquery.mixitup.min.js"></script>
+<script src="/wp-content/themes/insightcustom/js/main.js"></script> <!-- Resource jQuery -->
 <?php wp_footer(); ?>
 </body>
 </html>

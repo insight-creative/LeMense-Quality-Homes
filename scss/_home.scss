@@ -23,6 +23,7 @@
   .overlayBorder {
     border: 1px solid $white;
     height: calc(100% - 20px);
+    transition: .3s ease;
   }
 }
 .arrow {

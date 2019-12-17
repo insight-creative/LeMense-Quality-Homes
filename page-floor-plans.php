@@ -3,7 +3,6 @@
  * @package InsightCustom
  */
 get_header();
-
 ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
@@ -17,7 +16,7 @@ get_header();
 			</div>
 			<div class="headerOuterWrap">
 				<div class="headerInnerWrap" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="500">
-					<h1><?php the_title(); ?></h1>
+					<h1>Floor Plans</h1>
 					<div class="arrow">
 						<?php get_template_part('/inc/svg-icons/chevron-down'); ?>
 					</div>
@@ -26,6 +25,13 @@ get_header();
 		</section>
 		<div class="pageContentContainer">
 			<div class="navWidth">
+				<section id="testimonial" class="row">
+					<div class="drywallBack testimonialWrapper paddedSection">
+						<div class="pageWidth">
+							<?php get_template_part("/inc/slider/testimonial-slider"); ?>
+						</div>
+					</div>
+				</section>
 			</div>
 		</div>
 	</main>

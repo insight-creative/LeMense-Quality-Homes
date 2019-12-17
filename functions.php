@@ -180,26 +180,23 @@ function my_acf_admin_head() {
     <?php
 }
 add_action('acf/input/admin_head', 'my_acf_admin_head');
-function wpb_list_child_pages() {
-
-global $post;
-
-if ( is_page() && $post->post_parent )
-
-    $childpages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->post_parent . '&echo=0' );
-else
-    $childpages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->ID . '&echo=0' );
-
-if ( $childpages ) {
-
-    $string = '<ul>' . $childpages . '</ul>';
+/*
+* edits to the search query
+*/
+function search_filter( $query ) {
+    if ( $query->is_search ) {
+        $query->set( 'post_type', array('post','page') );
+    }
+    return $query;
 }
+add_filter('pre_get_posts','search_filter');
+/*
+* Add in our custom post types
+*/
+require_once("inc/custom-post-type.php");
+require_once("inc/custom-cats.php");
+require_once("inc/portfolio/custom-search.php");
 
-return $string;
-
-}
-
-add_shortcode('wpb_childpages', 'wpb_list_child_pages');
 /*********************************************************
 Enqueue scripts and styles
 *********************************************************/

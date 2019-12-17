@@ -1,0 +1,76 @@
+#galleryIntro {
+  h2 {
+    text-align: center;
+    font-size: 40px;
+    @include breakpoint (tabletScreen) {
+      font-size: 49px;
+    }
+  }
+}
+#gallery {
+  .galleryCoverOuter {
+    margin: 5px 10px;
+    @include breakpoint (tabletScreen) {
+      margin: 10px 20px;
+    }
+    @include breakpoint (laptopScreen) {
+      margin: 20px;
+    }
+  }
+  .galleryCover {
+    position: relative;
+  }
+  a {
+    .overlayBorder {
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(29, 43, 86, 0.3);
+      h2 {
+        color: $white;
+        text-shadow: 2px 2px 5px rgba(29, 43, 86, 0.7);
+      }
+    }
+    &:hover {
+      .overlayBorder{
+        margin: 0;
+        height: calc(100% - 6px);
+        background-color: rgba(29, 43, 86, 0.7);
+        transition: .3s ease;
+      }
+      .underline {
+        width: 150px;
+        transition: .3s ease;
+      }
+    }
+  }
+  .galleryTitleWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.galleryWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  img {
+    @include breakpoint (laptopScreen) {
+      width: 42%;
+    }
+    @include breakpoint (largeScreen) {
+      width: 45%;
+    }
+  }
+  img:nth-child(odd) {
+    @include breakpoint (laptopScreen) {
+      margin: 20px 20px 20px 40px;
+    }
+  }
+  img:nth-child(even) {
+    @include breakpoint (laptopScreen) {
+      margin: 20px 40px 20px 20px;
+    }
+  }
+}

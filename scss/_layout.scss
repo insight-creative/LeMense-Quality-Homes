@@ -105,7 +105,7 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	height: 70vh;
-	top: 95px;
+	top: 94px;
 	left: 2.5%;
 }
 .heroOverlay {
@@ -133,6 +133,7 @@
 	border: 1px solid $brandColor;
 	margin: 10px;
 	height: calc(100% - 30px);
+	transition: .3s ease;
 }
 .drywallBack {
 	background-color: #f6f6f6;
@@ -147,6 +148,7 @@
   height: 5px;
   background-color: $accentColor;
 	margin-bottom: 15px;
+	transition: .3s ease;
 }
 .container {
 	padding-bottom: 50px;
@@ -249,7 +251,7 @@
 		padding: 0 20px;
 	}
 }
-.image{
+.blockImage{
 	width: 100%;
 	height: auto;
 }

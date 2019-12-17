@@ -1,5 +1,6 @@
 <?php
 /**
+ * Template Name: Services
  * @package InsightCustom
  */
 get_header();
@@ -15,7 +16,7 @@ get_header();
 			</div>
 			<div class="headerOuterWrap">
 				<div class="headerInnerWrap" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="500">
-					<h1>Services</h1>
+					<h1><?php the_title(); ?></h1>
 					<div class="arrow">
 						<?php get_template_part('/inc/svg-icons/chevron-down'); ?>
 					</div>

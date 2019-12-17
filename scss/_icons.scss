@@ -47,9 +47,20 @@
 .searchIcons {
   position: absolute;
   top: 15px;
-  left: 0;
+  left: 10px;
   stroke: $darkGrey;
   fill: $darkGrey;
+  cursor: pointer;
+}
+.search-form {
+  .searchIcons {
+    color: $white;
+    fill: $white;
+  }
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
 }
 .icon-copyright {
   stroke: $brandColor;
