@@ -107,6 +107,9 @@
 	 width: 200px;
 	 height: auto;
 	 padding: 10px;
+	 @include breakpoint (largeScreen) {
+		 width: 250px;
+	 }
  }
 }
 .navWrapper {

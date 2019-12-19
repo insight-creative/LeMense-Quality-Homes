@@ -1,0 +1,148 @@
+#portfolio {
+  p {
+    margin-bottom: 0 !important;
+  }
+}
+.nav-links-container {
+  .nav-links {
+  	display: -webkit-box;
+  	display: -ms-flexbox;
+  	display: flex;
+  	-webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 20px 0;
+    .col20 {
+      width: 30%;
+      @include breakpoint (laptopScreen) {
+        width: 20%;
+      }
+    }
+    .col60 {
+      width: 30%;
+      @include breakpoint (laptopScreen) {
+        width: 60%;
+      }
+    }
+    .nav-next, .nav-previous {
+      width: 100%;
+      span {
+        display: none;
+        @include breakpoint (tabletScreen) {
+          display: block;
+        }
+      }
+    }
+    .nav-previous {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      a {
+        &:after {
+          position: absolute;
+          height: 2px;
+          width: 20px;
+          content: "";
+          background-color: $brandColor;
+          top: 49%;
+          left: 20px;
+          opacity: 0;
+          transition: .2s ease;
+        }
+        &:hover {
+          &:after {
+            left: 4px;
+            opacity: 1;
+            transition: .2s ease;
+          }
+          .chevron {
+            right: 15px;
+          }
+        }
+      }
+    }
+    .nav-next {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      a {
+        &:after {
+          position: absolute;
+          height: 2px;
+          width: 20px;
+          content: "";
+          background-color: $brandColor;
+          top: 49%;
+          right: 20px;
+          opacity: 0;
+          transition: .2s ease;
+        }
+        &:hover {
+          &:after {
+            right: 4px;
+            opacity: 1;
+            transition: .2s ease;
+          }
+          .chevron {
+            left: 15px;
+          }
+        }
+      }
+    }
+  }
+  .nav-previous, .nav-next {
+    font-size: 10px;
+    @include breakpoint (largeMobileScreen) {
+      font-size: 20px;
+    }
+    .arrowRight, .arrowLeft {
+      opacity: 0;
+    }
+    &:hover {
+      .arrowRight, .arrowLeft {
+        opacity: 1;
+      }
+    }
+    a {
+      position: relative;
+      color: $brandColor;
+      text-decoration: none;
+      padding: 10px;
+      -webkit-transition: .3s ease all;
+      transition: .3s ease all;
+      &:hover{
+        -webkit-transition: .3s ease all;
+        transition: .3s ease all;
+      }
+    }
+  }
+  .nav-back {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    a {
+      color: $brandColor;
+      text-decoration: none;
+      &:hover {
+        .icon-th {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  .back {
+  	display: -webkit-box;
+  	display: -ms-flexbox;
+  	display: flex;
+  	-webkit-box-orient: vertical;
+  	-webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  	align-items: center;
+  }
+}
+#portfolioArchive {
+  article {
+    width: 48%;
+  }
+}

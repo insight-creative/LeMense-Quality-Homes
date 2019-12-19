@@ -107,6 +107,9 @@
 	height: 70vh;
 	top: 94px;
 	left: 2.5%;
+	@include breakpoint (largeScreen) {
+		top: 113px;
+	}
 }
 .heroOverlay {
 	position: absolute;

@@ -7,7 +7,7 @@
     }
   }
 }
-#gallery {
+.gallery {
   .galleryCoverOuter {
     margin: 5px 10px;
     @include breakpoint (tabletScreen) {
@@ -27,7 +27,7 @@
       align-items: center;
       justify-content: center;
       background-color: rgba(29, 43, 86, 0.3);
-      h2 {
+      h2, h6 {
         color: $white;
         text-shadow: 2px 2px 5px rgba(29, 43, 86, 0.7);
       }

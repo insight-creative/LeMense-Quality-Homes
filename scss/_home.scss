@@ -14,10 +14,12 @@
     h1 {
       color: $white;
       margin-bottom: 0;
+      text-shadow: 2px 2px 5px $black;
     }
     p {
       color: $white;
       margin-bottom: 5px !important;
+      text-shadow: 2px 2px 5px $black;
     }
   }
   .overlayBorder {
@@ -28,72 +30,72 @@
 }
 .arrow {
     -webkit-animation: bounce 3s infinite cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            animation: bounce 3s infinite cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: bounce 3s infinite cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 @-webkit-keyframes bounce {
     0% {
-        transform: translate(0, 0px);
-        -webkit-animation-timing-function: cubic-bezier(.19, .28, .27, 1);
-                animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+      transform: translate(0, 0px);
+      -webkit-animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+      animation-timing-function: cubic-bezier(.19, .28, .27, 1);
     }
     11% {
-        transform: translate(0, -2px);
-        -webkit-animation-timing-function: cubic-bezier(.57, .01, .84, .5);
-                animation-timing-function: cubic-bezier(.57, .01, .84, .5);
+      transform: translate(0, -2px);
+      -webkit-animation-timing-function: cubic-bezier(.57, .01, .84, .5);
+      animation-timing-function: cubic-bezier(.57, .01, .84, .5);
     }
     20% {
-        transform: translate(0, 0px);
-        -webkit-animation-timing-function: cubic-bezier(.19, .28, .27, 1);
-                animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+      transform: translate(0, 0px);
+      -webkit-animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+      animation-timing-function: cubic-bezier(.19, .28, .27, 1);
     }
     28% {
-        transform: translate(0, -2px);
-        -webkit-animation-timing-function: cubic-bezier(.57, .01, .84, .5);
-                animation-timing-function: cubic-bezier(.57, .01, .84, .5);
+      transform: translate(0, -2px);
+      -webkit-animation-timing-function: cubic-bezier(.57, .01, .84, .5);
+      animation-timing-function: cubic-bezier(.57, .01, .84, .5);
     }
     36% {
-        transform: translate(0, 0px);
-        -webkit-animation-timing-function: cubic-bezier(.19, .28, .27, 1);
-                animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+      transform: translate(0, 0px);
+      -webkit-animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+      animation-timing-function: cubic-bezier(.19, .28, .27, 1);
     }
     100% {
-        transform: translate(0, 0px);
-        -webkit-animation-timing-function: cubic-bezier(.19, .28, .27, 1);
-                animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+      transform: translate(0, 0px);
+      -webkit-animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+      animation-timing-function: cubic-bezier(.19, .28, .27, 1);
     }
 }
 
 @keyframes bounce {
     0% {
-        transform: translate(0, 0px);
-        -webkit-animation-timing-function: cubic-bezier(.19, .28, .27, 1);
-                animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+      transform: translate(0, 0px);
+      -webkit-animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+      animation-timing-function: cubic-bezier(.19, .28, .27, 1);
     }
     11% {
-        transform: translate(0, -2px);
-        -webkit-animation-timing-function: cubic-bezier(.57, .01, .84, .5);
-                animation-timing-function: cubic-bezier(.57, .01, .84, .5);
+      transform: translate(0, -2px);
+      -webkit-animation-timing-function: cubic-bezier(.57, .01, .84, .5);
+      animation-timing-function: cubic-bezier(.57, .01, .84, .5);
     }
     20% {
-        transform: translate(0, 0px);
-        -webkit-animation-timing-function: cubic-bezier(.19, .28, .27, 1);
-                animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+      transform: translate(0, 0px);
+      -webkit-animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+      animation-timing-function: cubic-bezier(.19, .28, .27, 1);
     }
     28% {
-        transform: translate(0, -2px);
-        -webkit-animation-timing-function: cubic-bezier(.57, .01, .84, .5);
-                animation-timing-function: cubic-bezier(.57, .01, .84, .5);
+      transform: translate(0, -2px);
+      -webkit-animation-timing-function: cubic-bezier(.57, .01, .84, .5);
+      animation-timing-function: cubic-bezier(.57, .01, .84, .5);
     }
     36% {
-        transform: translate(0, 0px);
-        -webkit-animation-timing-function: cubic-bezier(.19, .28, .27, 1);
-                animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+      transform: translate(0, 0px);
+      -webkit-animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+      animation-timing-function: cubic-bezier(.19, .28, .27, 1);
     }
     100% {
-        transform: translate(0, 0px);
-        -webkit-animation-timing-function: cubic-bezier(.19, .28, .27, 1);
-                animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+      transform: translate(0, 0px);
+      -webkit-animation-timing-function: cubic-bezier(.19, .28, .27, 1);
+      animation-timing-function: cubic-bezier(.19, .28, .27, 1);
     }
 }
 .pageContentContainer {
@@ -102,6 +104,9 @@
   width: 100%;
   margin-top: calc(70vh + 100px);
   background-color: $white;
+  @include breakpoint (largeScreen) {
+    margin-top: calc(70vh + 113px);
+  }
 }
 #companyIntro {
   h2 {
