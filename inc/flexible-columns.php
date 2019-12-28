@@ -35,7 +35,7 @@ if( have_rows('flexible_fields') ):
           $col_1 = get_sub_field('col_content_1');
           $col_2 = get_sub_field('col_content_2');
           ?>
-          <div class="flexContainer pageWidth">
+          <div class="flexContainer navWidth">
             <?php
             if( $col_1 ): ?>
               <div class="col50">
@@ -67,7 +67,7 @@ if( have_rows('flexible_fields') ):
           $col_2 = get_sub_field('col_content_2');
           $col_3 = get_sub_field('col_content_3');
         ?>
-        <div class="flexContainer pageWidth">
+        <div class="flexContainer navWidth">
         <?php
           if( $col_1 ): ?>
             <div class="col30">

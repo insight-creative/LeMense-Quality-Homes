@@ -430,7 +430,7 @@ Font Variables
   background-repeat: no-repeat;
   background-position: center;
   height: 70vh;
-  top: 94px;
+  top: 100px;
   left: 2.5%; }
   @media (min-width: 1400px) {
     .hero {
@@ -2571,8 +2571,8 @@ xcustom form elements
   content: '';
   position: absolute;
   z-index: 1;
-  right: 14px;
-  top: 65%;
+  right: 8px;
+  top: 70%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -2767,7 +2767,7 @@ xcustom form elements
       width: 20px;
       content: "";
       background-color: #1D2B56;
-      top: 49%;
+      top: 48%;
       left: 20px;
       opacity: 0;
       transition: .2s ease; }
@@ -2787,7 +2787,7 @@ xcustom form elements
       width: 20px;
       content: "";
       background-color: #1D2B56;
-      top: 49%;
+      top: 48%;
       right: 20px;
       opacity: 0;
       transition: .2s ease; }
