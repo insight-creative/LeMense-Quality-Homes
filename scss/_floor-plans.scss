@@ -495,3 +495,18 @@ xcustom form elements
     display: none;
   }
 }
+// Single Floor Plans
+.floorPlan {
+  hr {
+    border: 1px solid $lightGrey;
+  }
+}
+.floorPlanDetailsOuter {
+  background-color: $lightGrey;
+}
+.floorPlanDetailsInner {
+  padding: 10px;
+  p {
+    margin-bottom: 0 !important;
+  }
+}

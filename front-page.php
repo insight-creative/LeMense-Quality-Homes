@@ -42,7 +42,7 @@ get_header();
 						<?php
 			        $image = get_field('shelly_and_mark');
 			        $imageID = $image['ID'];
-			        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'blockImage logo', 'data-sizes' => 'auto' ) );
+			        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'blockImage', 'data-sizes' => 'auto' ) );
 			      ?>
 						<div class="overlayBorderOuter">
 							<div class="overlayBorder"></div>
@@ -122,7 +122,7 @@ get_header();
 							<?php
 				        $image = get_field('featured_work_1');
 				        $imageID = $image['ID'];
-				        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'blockImage logo', 'data-sizes' => 'auto' ) );
+				        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'blockImage', 'data-sizes' => 'auto' ) );
 				      ?>
 							<div class="overlayBorderOuter">
 								<div class="overlayBorder"></div>
@@ -132,7 +132,7 @@ get_header();
 							<?php
 				        $image = get_field('featured_work_2');
 				        $imageID = $image['ID'];
-				        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'blockImage logo', 'data-sizes' => 'auto' ) );
+				        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'blockImage', 'data-sizes' => 'auto' ) );
 				      ?>
 							<div class="overlayBorderOuter">
 								<div class="overlayBorder"></div>
@@ -142,7 +142,7 @@ get_header();
 							<?php
 				        $image = get_field('featured_work_3');
 				        $imageID = $image['ID'];
-				        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'blockImage logo', 'data-sizes' => 'auto' ) );
+				        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'blockImage', 'data-sizes' => 'auto' ) );
 				      ?>
 							<div class="overlayBorderOuter">
 								<div class="overlayBorder"></div>
@@ -152,7 +152,7 @@ get_header();
 							<?php
 				        $image = get_field('featured_work_4');
 				        $imageID = $image['ID'];
-				        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'blockImage logo', 'data-sizes' => 'auto' ) );
+				        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'blockImage', 'data-sizes' => 'auto' ) );
 				      ?>
 							<div class="overlayBorderOuter">
 								<div class="overlayBorder"></div>
@@ -178,7 +178,7 @@ get_header();
 							<?php
 				        $image = get_field('floorplans_image');
 				        $imageID = $image['ID'];
-				        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'blockImage logo', 'data-sizes' => 'auto' ) );
+				        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'blockImage', 'data-sizes' => 'auto' ) );
 				      ?>
 							<div class="overlayBorderOuter">
 								<div class="overlayBorder"></div>
