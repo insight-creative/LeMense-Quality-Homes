@@ -1,9 +1,9 @@
 <?php
 /**
- * Template Name: Portfolio Template
  * @package InsightCustom
  */
 get_header();
+
 ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
@@ -17,8 +17,7 @@ get_header();
 			</div>
 			<div class="headerOuterWrap">
 				<div class="headerInnerWrap" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="500">
-					<h1><?php the_title(); ?></h1>
-					<p class="smallHeading"><?php if( get_field('square_footage') ): echo get_field('square_footage'); ?> Sqft. | <?php endif; ?><?php echo get_field('number_of_bedrooms'); ?> Bed | <?php echo get_field('number_of_full_bathrooms'); ?> Bath</p>
+					<h1>Thank You</h1>
 					<div class="arrow">
 						<?php get_template_part('/inc/svg-icons/chevron-down'); ?>
 					</div>
@@ -26,19 +25,21 @@ get_header();
 			</div>
 		</section>
 		<div class="pageContentContainer">
-			<div id="floorPlans" class="floorPlan navWidth paddedSection">
-				<div class="flexContainer">
-					<div class="col70">
-						<?php get_template_part('/inc/slider/floor-plan-slider'); ?>
-						<?php get_template_part('/inc/floor-plans/floor-plan-details'); ?>
+			<div class="navWidth paddedSection">
+				<section id="thankYou" class="paddedSection" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="1000">
+					<div class="drywallBack paddedSection">
+						<div class="titleWrap">
+							<h2>Thank You for Your Interest in Our Floor Plans!</h2>
+							<div class="underline"></div>
+						</div>
+						<p class="blockText">
+						We'll get back to you as soon as we can. In the meantime, browse some of our projects or floor plans below. We look forward to working with you!
+						</p>
 					</div>
-					<div class="col30">
-						<?php get_template_part('/inc/floor-plans/floor-plan-cta'); ?>
-					</div>
-				</div>
+				</section>
 			</div>
-			<?php get_template_part("/inc/floor-plans/custom-post-nav"); ?>
-			<?php get_template_part("/inc/related-floor-plans"); ?>
+			<?php get_template_part('/inc/related-projects'); ?>
+			<?php get_template_part('/inc/related-floor-plans'); ?>
 		</div>
 	</main>
 </div>

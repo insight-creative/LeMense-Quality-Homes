@@ -93,6 +93,7 @@
 }
 .swiper-content-inner {
   padding: 20px;
+  margin: 0 auto;
   .underline {
     margin: 0 auto;
   }
@@ -104,7 +105,7 @@
   .swiper-slide {
     height: 400px !important;
     @include breakpoint (largeMobileScreen) {
-      height: 600px !important;
+      height: 705px !important;
     }
   }
   .swiper-container-outer {
@@ -119,7 +120,7 @@
     height: 100%;
     background-color: rgba(29, 43, 86, 0.7);
     padding: 10px;
-    top: 0;
+    top: 10px;
     color: $white !important;
     transition: .2s ease;
     &:hover {
@@ -129,5 +130,8 @@
   }
   .swiper-button-prev {
     left: 0;
+  }
+  .swiper-button-next {
+    right: 0;
   }
 }

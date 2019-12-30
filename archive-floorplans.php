@@ -1,10 +1,9 @@
 <?php
 /**
 * The template for displaying archive pages
-* Template Name: Floor Plans Archive
 * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
 *
-* @package changeCatalystResponsive
+* @package InsightCustom
 */
 get_header();
 ?>
@@ -19,7 +18,7 @@ get_header();
 			</div>
 			<div class="headerOuterWrap">
 				<div class="headerInnerWrap" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="500">
-					<h1>Floor Plans</h1>
+					<h1>Exclusive Floor Plans</h1>
 					<div class="arrow">
 						<?php get_template_part('/inc/svg-icons/chevron-down'); ?>
 					</div>
@@ -27,50 +26,62 @@ get_header();
 			</div>
 		</section>
 		<div class="pageContentContainer">
-			<div class="navWidth paddedSection">
+			<div class="navWidth">
+				<section id="floorPlanIntro" class="paddedSection" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="1000">
+					<div class="drywallBack paddedSection">
+						<div class="titleWrap limitWidth">
+							<h2>Browse our extensive library of original floor plans.</h2>
+							<div class="underline"></div>
+						</div>
+						<p class="blockText">
+							All of our plans are arranged by style and square footage. Simply click on any of the thumbnail images below to see more details for each plan, or enter the number of bedrooms, bathrooms, stories and garage stalls to see floor plans that match your criteria.
+						</p>
+					</div>
+				</section>
         <form>
           <div class="cd-filter-block">
             <div class="cd-filter-content">
               <div class="cd-select cd-filters">
-                Bedrooms
+                Bedroom
                 <select class="filter" name="selectThis" id="selectThis">
                   <option value="">Choose an option</option>
-                  <option value=".one-bedroom">One Bedroom</option>
-                  <option value=".two-bedroom">Two Bedroom</option>
-									<option value=".three-bedroom">Three Bedroom</option>
-                  <option value=".four-bedroom">Four Bedroom</option>
+                  <option value=".one-bedroom">1 Bedroom</option>
+									<option value=".two-bedroom">2 Bedroom</option>
+									<option value=".three-bedroom">3 Bedroom</option>
+                  <option value=".four-bedroom">4 Bedroom</option>
+									<option value=".five-bedroom">5 Bedroom</option>
                 </select>
               </div> <!-- cd-select -->
             </div> <!-- cd-filter-content -->
             <div class="cd-filter-content">
               <div class="cd-select cd-filters">
-                Bathrooms
+                Bathroom
                 <select class="filter" name="selectThis" id="selectThis">
                   <option value="">Choose an option</option>
-                  <option value=".one-bathroom">One Bathroom</option>
-                  <option value=".two-bathroom">Two Bathroom</option>
-                  <option value=".three-bathroom">Three Bathroom</option>
+                  <option value=".one-bathroom">1 Bathroom</option>
+                  <option value=".two-bathroom">2 Bathroom</option>
+                  <option value=".three-bathroom">3 Bathroom</option>
                 </select>
               </div> <!-- cd-select -->
             </div> <!-- cd-filter-content -->
 						<div class="cd-filter-content">
               <div class="cd-select cd-filters">
-                Stories
+                Story
                 <select class="filter" name="selectThis" id="selectThis">
                   <option value="">Choose an option</option>
-                  <option value=".one-story">One Story</option>
-                  <option value=".two-story">Two Story</option>
+                  <option value=".one-story">1 Story</option>
+                  <option value=".two-story">2 Story</option>
                 </select>
               </div> <!-- cd-select -->
             </div> <!-- cd-filter-content -->
             <div class="cd-filter-content">
               <div class="cd-select cd-filters">
-                Garage Stalls
+                Garage
                 <select class="filter" name="selectThis" id="selectThis">
                   <option value="">Choose an option</option>
-                  <option value=".one-car-garage">One Car Garage</option>
-                  <option value=".two-car-garage">Two Car Garage</option>
-                  <option value=".three-car-garage">Three Car Garage</option>
+                  <option value=".one-car-garage">1 Car Garage</option>
+                  <option value=".two-car-garage">2 Car Garage</option>
+                  <option value=".three-car-garage">3 Car Garage</option>
                 </select>
               </div> <!-- cd-select -->
             </div> <!-- cd-filter-content -->
@@ -83,7 +94,7 @@ get_header();
         					$the_query = new WP_Query( array(
         						'post_type' => 'Floor Plans',
         						'order' => 'DESC',
-        						'posts_per_page' => 10,
+        						'posts_per_page' => 70,
         						)
         					);
         				while ( $the_query->have_posts() ) :
@@ -110,10 +121,12 @@ get_header();
                           <h4><?php the_title(); ?></h4>
                           <div class="detailsContainer">
 														<p>
-															2002 Sq. Ft.
+															<?php if( get_field('square_footage') ):
+															echo get_field('square_footage'); ?> Sqft.
+															<?php endif; ?>
 														</p>
 														<p>
-															2 Bed | 2 Bath
+															<?php echo get_field('number_of_bedrooms'); ?> Bed | <?php echo get_field('number_of_full_bathrooms'); ?> Bath
 														</p>
                           </div>
                           <div class="viewPlan">
@@ -129,7 +142,7 @@ get_header();
                 <?php endwhile; ?>
               </div>
       			</ul>
-      			<div class="cd-fail-message">No results found</div>
+      			<div class="cd-fail-message">No results found<br><a href="/floor-plans/">Reset Filters</a></div>
       		</section> <!-- cd-gallery -->
 			</div>
 		</div>

@@ -14,7 +14,7 @@ get_header();
 		<div class="pageWidth flexContainer">
 			<div class="col50">
 				<h3>Pages</h3>
-					<?php wp_list_pages(array('sort_column' => 'post_title', 'exclude' => '168', 'title_li' => ' ', 'depth' => 0)); ?>
+					<?php wp_list_pages(array('sort_column' => 'post_title', 'exclude' => '168, 693, 695, 61', 'title_li' => ' ', 'depth' => 0)); ?>
 			</div>
 		</div>
 	</main>

@@ -1,6 +1,11 @@
 #floorPlansHero {
   background-image: url("/wp-content/uploads/2019/12/lemense-quality-homes-custom-home-exterior-large.jpg");
 }
+#floorPlanIntro {
+  h2 {
+    text-align: center;
+  }
+}
 .floorPlanContainer {
   display: flex;
   flex-wrap: wrap;
@@ -245,7 +250,6 @@ xfilter
     padding: 70px 10%;
   }
 }
-
 .cd-filter-trigger {
   position: absolute;
   top: 0;
@@ -286,7 +290,6 @@ xfilter
     color: #ffffff;
   }
 }
-
 /* --------------------------------
 
 xcustom form elements
@@ -488,7 +491,6 @@ xcustom form elements
 .cd-filter-block input[type=checkbox]:checked + label::after {
   display: block;
 }
-
 @-moz-document url-prefix() {
   /* hide custom arrow on Firefox - select element */
   .cd-filter-block .cd-select::after {
@@ -497,8 +499,19 @@ xcustom form elements
 }
 // Single Floor Plans
 .floorPlan {
-  hr {
-    border: 1px solid $lightGrey;
+  .col30 {
+    margin-top: 10px;
+    @include breakpoint (laptopScreen) {
+      margin-top: 0;
+      margin-left: 10px;
+    }
+  }
+  .col70 {
+    .floorPlanDetailsOuter {
+      margin-top: 10px;
+    }
+  }
+  .formWrap {
   }
 }
 .floorPlanDetailsOuter {
@@ -509,4 +522,15 @@ xcustom form elements
   p {
     margin-bottom: 0 !important;
   }
+}
+.detailWrapper {
+  display: flex;
+  justify-content: center;
+}
+.detail {
+  padding: 0 10px;
+  border-right: 1px solid $brandColor;
+}
+.detail:last-of-type {
+  border-right: none;
 }

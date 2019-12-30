@@ -29,20 +29,21 @@ get_header();
 				<section id="companyIntro" class="paddedSection" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="1000">
 					<div class="drywallBack paddedSection">
 						<div class="titleWrap">
-							<h2>A Better Building Process</h2>
+							<h2>Relationships Built to Last</h2>
 							<div class="underline"></div>
 						</div>
 						<p class="blockText">
-							LeMense Quality Homes provides an unmatched home building experience in northeast Wisconsin. Discover the ease of building your new home from scratch with confidence! Our streamlined process includes custom building, interior design, remodeling, realty—even a library of exclusive floor plans—allowing you to build an incredible home at an incredible value.
+						Our homes are built on mutual respect and customer satisfaction. When a job is complete, we’re always proud to add another beautiful home to our gallery, but we’re equally proud of the relationships we’ve built along the way. Read testimonials from real clients below.
 						</p>
 					</div>
 				</section>
-				<section id="testimonial" class="row">
-					<div class="drywallBack testimonialWrapper paddedSection">
-						<div class="pageWidth">
-							<?php get_template_part("/inc/slider/testimonial-slider"); ?>
-						</div>
-					</div>
+				<section id="testimonials" class="row">
+					<?php
+					while ( have_posts() ) :
+						the_post();
+						the_content();
+					endwhile; // End of the loop.
+					?>
 				</section>
 			</div>
 		</div>

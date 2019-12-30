@@ -1,13 +1,13 @@
 <!--
   Create related projects
   -->
-  <section id="featuredProjects" class="gallery">
+  <section id="featuredPlans" class="gallery">
     <?php
     $post_objects = get_field('related_post');
     if( $post_objects ): ?>
     <div class="drywallBack paddedSection">
       <div class="titleWrap limitWidth">
-        <h5 class="mediumHeading">Similar Floor Plans</h3>
+        <h5 class="mediumHeading">Featured Floor Plans</h3>
         <div class="underline"></div>
       </div>
       <div class="flexContainer navWidth">
@@ -40,7 +40,7 @@
         );?>
         <div class="drywallBack paddedSection">
           <div class="titleWrap limitWidth">
-            <h5 class="mediumHeading">Similar Floor Plans</h3>
+            <h5 class="mediumHeading">Featured Floor Plans</h3>
             <div class="underline"></div>
           </div>
           <div class="flexContainer navWidth">
@@ -69,5 +69,5 @@
         </div>
       </div>
     </div>
+    <?php endif; ?>
   </section>
-  <?php endif; ?>
