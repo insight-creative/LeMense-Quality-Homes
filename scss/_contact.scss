@@ -1,58 +1,109 @@
 /*--------------------------------------------------------------
 13.0 Contact Page
 --------------------------------------------------------------*/
-.ginput_container {
-  input[type=text], textarea {
-    width: 100% !important;
-    box-shadow: 2px 2px 5px rgba(42, 42, 42, 0.3);
-    border: none;
-    background-color: $lightGrey;
+.page-id-120, .page-id-695, .page-id-693 {
+  .subNav {
+    display: none;
   }
 }
-.gform_footer {
-  input[type=submit] {
-    position: relative;
-  	z-index: 1;
-    font-family: $roboto;
-    font-size: 18px;
-  	font-weight: 700;
-    text-decoration: none;
-  	border: 2px solid $brandColor;
-  	border-radius: 10px;
-  	background: $brandColor;
-  	padding: 5px 25px 5px 25px;
-  	color: $white;
-  	-webkit-transition: .3s ease;
-  	transition: .3s ease;
-  	cursor: pointer;
-    white-space: nowrap;
-    box-shadow: 4px 4px 5px rgba(0,0,0,0.4);
-    &:hover{
-      background: $white;
-    	color: $brandColor;
-    	-webkit-transition: .3s ease;
-    	transition: .3s ease;
-    }
-  }
-}
-.gfield_label {
-  font-size: 18px !important;
-}
-#contact {
-  .col50 {
-    @include breakpoint (laptopScreen) {
-      padding-right: 20px;
-    }
-  }
-}
-.formWrapper{
+.formWrapInner {
   padding: 20px;
-  border: 1px solid $lightGrey;
-  border-radius: 5px;
-  margin-bottom: 20px;
 }
-.smallMapWrapper {
-  @include breakpoint (laptopScreen) {
-    margin-top: -100px;
+#caldera_form_1 {
+  label, .field_required {
+    color: $brandColor !important;
+    font-size: 16px;
+    margin-bottom: 0;
   }
+  .form-control {
+    border: 2px solid #d9d9d9;
+    border-radius: 0;
+    &:focus {
+      border: 2px solid $brandColor;
+      box-shadow: 0 0 8px rgba(	29, 43, 86, .6)
+    }
+  }
+  .row {
+    padding: 0;
+  }
+  .btn {
+    background-color: $brandColor;
+    color: $white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0;
+    transition: .2s ease;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    &:hover {
+      background-color: $accentColor;
+      color: $brandColor;
+      transition: .2s ease;
+    }
+  }
+}
+.contactWrapOuter {
+  a {
+  	color: $brandColor;
+  	transition: .2s ease;
+  	&:hover {
+  		text-decoration: none;
+  		color: $darkGrey;
+  		transition: .2s ease;
+  	}
+  }
+}
+.contactTestimonial {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 100px;
+  @include breakpoint (laptopScreen) {
+    margin-top: 150px;
+  }
+  &:before {
+    position: absolute;
+    z-index: 3;
+    top: 70px;
+    left: -25px;
+    font-family: $montserrat;
+    font-size: 350px;
+    color: $brandColor;
+    content: '\201c';
+    @include breakpoint (laptopScreen) {
+      top: 130px;
+      left: -30px;
+      font-size: 450px;
+    }
+  }
+  &:after {
+    position: absolute;
+    z-index: 2;
+    top: 80px;
+    left: -20px;
+    font-family: $montserrat;
+    font-size: 350px;
+    color: $accentColor;
+    content: '\201c';
+    @include breakpoint (laptopScreen) {
+      top: 120px;
+      left: -20px;
+      font-size: 450px;
+    }
+  }
+  .contactTestimonialInner {
+    padding: 65px 20px 15px;
+    @include breakpoint (laptopScreen) {
+      padding: 100px 20px 15px;
+    }
+    .centerText {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+#featuredPlans {
+  position: relative;
+  z-index: 5;
 }

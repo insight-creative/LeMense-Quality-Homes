@@ -29,36 +29,50 @@ get_header();
 				<section id="companyIntro" class="paddedSection" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="1000">
 					<div class="drywallBack paddedSection">
 						<div class="titleWrap">
-							<h2>A Better Building Process</h2>
+							<h2>Family Owned, Locally Known</h2>
 							<div class="underline"></div>
 						</div>
 						<p class="blockText">
-							LeMense Quality Homes provides an unmatched home building experience in northeast Wisconsin. Discover the ease of building your new home from scratch with confidence! Our streamlined process includes custom building, interior design, remodeling, realty—even a library of exclusive floor plans—allowing you to build an incredible home at an incredible value.
+							Since 2000, LeMense Quality Homes has built some of Northeast Wisconsin’s most incredible custom homes at an incredible value. As a family-owned business, Mark, alongside his wife Shelly, manage the build process for each client from start to finish. Mark brings years of hands-on carpentry experience while Shelly contributes a detailed eye to project management and design. Known for their friendly approach and streamlined building process, the LeMenses offer custom building, interior design, remodeling, realty—even a library of exclusive floor plans—all from one local, trusted source. With valuable support from their crew of reliable subcontractors, plus their kids Jack, Bennett, Brenna and Kamden, the LeMense experience is affordable, easy and, most importantly, feels like home.
 						</p>
 					</div>
 				</section>
-				<section id="aboutTheOwners" class="row">
-					<div class="col80 borderedImage wideImage">
-						<?php
-			        $image = get_field('shelly_and_mark');
-			        $imageID = $image['ID'];
-			        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'blockImage logo', 'data-sizes' => 'auto' ) );
-			      ?>
-						<div class="overlayBorderOuter">
-							<div class="overlayBorder"></div>
+				<section id="theOwners" class="row flexContainer">
+					<div class="col50">
+						<div class="borderedImage" data-aos="fade-in">
+							<?php
+				        $image = get_field('mark');
+				        $imageID = $image['ID'];
+				        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'blockImage', 'data-sizes' => 'auto' ) );
+				      ?>
+							<div class="overlayBorderOuter">
+								<div class="overlayBorder"></div>
+							</div>
+						</div>
+						<div class="blockText">
+							<div class="titleWrap">
+								<h4>Meet Mark LeMense</h4>
+								<div class="underline"></div>
+								<p>Mark’s wide-ranging experience dates back to his first job out of high school. Upon graduation, Mark spent over 10 years working at a local premier cabinet manufacturer. After gaining a strong foundation in carpentry and learning his way around a job site, Mark built his first spec house and discovered his true passion for home building. In 2000, he began LeMense Quality Homes and quickly grew to become one of the most popular luxury home builders in Green Bay. Today, Mark uses his deep understanding of the building process to identify what’s truly right for clients and steer the process accordingly. His sincere and outgoing personality helps clients feel a true sense of partnership while collaborating to build their dream home.</p>
+							</div>
 						</div>
 					</div>
-					<div id="markShellyDesc" data-aos="fade-in" data-aos-offset="-350">
-						<div class="col50">
-							<div class="blueBack blockText">
-								<h3 class="largeHeading">Local Expertise</h3>
+					<div class="col50">
+						<div class="borderedImage" data-aos="fade-in">
+							<?php
+				        $image = get_field('shelly');
+				        $imageID = $image['ID'];
+				        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'blockImage', 'data-sizes' => 'auto' ) );
+				      ?>
+							<div class="overlayBorderOuter">
+								<div class="overlayBorder"></div>
+							</div>
+						</div>
+						<div class="blockText">
+							<div class="titleWrap">
+								<h4>Meet Shelly LeMense</h4>
 								<div class="underline"></div>
-								<p>
-									Mark and Shelly LeMense are the dream team to create your dream home! Mark’s hands-on expertise, Shelly’s keen eye for detail, decades of combined experience—plus a local reputation for excellence—make them your ultimate building partners.
-								</p>
-								<div class="btnWrap">
-									<a href="/about-us/" class="primaryBtnAlt">Learn More About Us<span>Learn More About Us</span></a>
-								</div>
+								<p>Those who know Shelly might say it’d be easier to list the things she doesn’t do. As a jack-of-all-trades, LeMense clients reap great rewards—including cost and time efficiencies—from Shelly’s multi-talented approach. After years working as a nurse, Shelly made a major career change to support the family business and then discovered her true calling. With an incredible eye for detail, great people skills, a knack for organization and natural artistic talent, Shelly touches most steps of the home-building process. From the job site to the office, Shelly confidently owns a myriad of responsibilities, including interior design! Also, as a licensed real estate agent, Shelly conveniently threads together the many components of building/selling, allowing clients to seamlessly transition into their new home.</p>
 							</div>
 						</div>
 					</div>
@@ -66,11 +80,15 @@ get_header();
 				<section id="testimonial" class="row">
 					<div class="drywallBack testimonialWrapper paddedSection">
 						<div class="pageWidth">
-							<?php get_template_part("/inc/slider/testimonial-slider"); ?>
+							<?php get_template_part("/inc/slider/testimonial-slider-2"); ?>
 						</div>
 					</div>
 				</section>
 			</div>
+			<div class="row">
+				<?php get_template_part('/inc/services'); ?>
+			</div>
+			<?php get_template_part("/inc/related-projects"); ?>
 		</div>
 	</main>
 </div>

@@ -51,11 +51,19 @@ p {
 .whiteText {
 	color: $white;
 }
+.brandText {
+	color: $brandColor;
+	font-weight: 500;
+}
 .centerText{
 	text-align: center;
 }
-.largeHeading {
+.extraLargeHeading {
 	font-size: 49px;
+	font-weight: 700;
+}
+.largeHeading {
+	font-size: 39px;
 	font-weight: 700;
 }
 .mediumHeading {

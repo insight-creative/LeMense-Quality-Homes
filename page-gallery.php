@@ -77,7 +77,7 @@ get_header();
 					</div>
 				</section>
 				<section id="gallery" class="gallery">
-					<div class="drywallBack paddedSection">
+					<div class="drywallBack row">
 						<div class="titleWrap limitWidth">
 							<h3>Rooms</h3>
 							<div class="underline"></div>

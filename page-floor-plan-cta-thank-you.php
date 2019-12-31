@@ -17,7 +17,7 @@ get_header();
 			</div>
 			<div class="headerOuterWrap">
 				<div class="headerInnerWrap" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="500">
-					<h1><?php the_title(); ?></h1>
+					<h1>Thank You</h1>
 					<div class="arrow">
 						<?php get_template_part('/inc/svg-icons/chevron-down'); ?>
 					</div>
@@ -25,27 +25,21 @@ get_header();
 			</div>
 		</section>
 		<div class="pageContentContainer">
-			<div class="navWidth">
-				<section id="companyIntro" class="paddedSection" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="1000">
+			<div class="navWidth paddedSection">
+				<section id="thankYou" class="paddedSection" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="1000">
 					<div class="drywallBack paddedSection">
 						<div class="titleWrap">
-							<h2>Relationships Built to Last</h2>
+							<h2>Thank You for Your Interest in Our Floor Plans!</h2>
 							<div class="underline"></div>
 						</div>
 						<p class="blockText">
-						Our homes are built on mutual respect and customer satisfaction. When a job is complete, we’re always proud to add another beautiful home to our gallery, but we’re equally proud of the relationships we’ve built along the way. Read testimonials from real clients below.
+						We'll get back to you as soon as we can. In the meantime, browse some of our projects or floor plans below. We look forward to working with you!
 						</p>
 					</div>
 				</section>
-				<section id="testimonials" class="row">
-					<?php
-					while ( have_posts() ) :
-						the_post();
-						the_content();
-					endwhile; // End of the loop.
-					?>
-				</section>
 			</div>
+			<?php get_template_part('/inc/related-projects'); ?>
+			<?php get_template_part('/inc/related-floor-plans'); ?>
 		</div>
 	</main>
 </div>
