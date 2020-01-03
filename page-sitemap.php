@@ -7,11 +7,11 @@ get_header();
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
 		<section id="sitemapEntry">
-			<div class="pageWidth">
+			<div class="limitWidth">
 				<h1 class="primaryText">Sitemap</h1>
 			</div>
 		</section>
-		<div class="pageWidth flexContainer">
+		<div class="limitWidth">
 			<div class="col50">
 				<h3>Pages</h3>
 					<?php wp_list_pages(array('sort_column' => 'post_title', 'exclude' => '168, 693, 695, 61', 'title_li' => ' ', 'depth' => 0)); ?>

@@ -33,7 +33,7 @@ get_header();
 							<h2>Browse our extensive library of original floor plans.</h2>
 							<div class="underline"></div>
 						</div>
-						<p class="blockText">
+						<p class="blockText limitWidth">
 							All of our plans are arranged by style and square footage. Simply click on any of the thumbnail images below to see more details for each plan, or enter the number of bedrooms, bathrooms, stories and garage stalls to see floor plans that match your criteria.
 						</p>
 					</div>

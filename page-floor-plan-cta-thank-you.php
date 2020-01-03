@@ -32,7 +32,7 @@ get_header();
 							<h2>Thank You for Your Interest in Our Floor Plans!</h2>
 							<div class="underline"></div>
 						</div>
-						<p class="blockText">
+						<p class="blockText limitWidth">
 						We'll get back to you as soon as we can. In the meantime, browse some of our projects or floor plans below. We look forward to working with you!
 						</p>
 					</div>

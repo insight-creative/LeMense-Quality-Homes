@@ -31,7 +31,7 @@ get_header();
 							<h2>Browse our gallery of recently completed homes to gain inspiration.</h2>
 							<div class="underline"></div>
 						</div>
-						<p class="blockText">
+						<p class="blockText limitWidth">
 							Sorted by project and room, view samples of our latest work to get ideas and see the quality of a LeMense home—inside and out!
 						</p>
 					</div>

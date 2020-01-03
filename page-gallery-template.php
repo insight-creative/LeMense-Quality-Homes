@@ -38,13 +38,6 @@ get_header();
 							<?php endif; ?>
 					</div>
 				</section>
-				<section id="testimonial" class="row">
-					<div class="drywallBack testimonialWrapper paddedSection">
-						<div class="pageWidth">
-							<?php get_template_part("/inc/slider/testimonial-slider"); ?>
-						</div>
-					</div>
-				</section>
 			</div>
 		</div>
 	</main>

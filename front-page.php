@@ -32,7 +32,7 @@ get_header();
 							<h2>A Better Building Process</h2>
 							<div class="underline"></div>
 						</div>
-						<p class="blockText">
+						<p class="blockText limitWidth">
 							LeMense Quality Homes provides an unmatched home building experience in northeast Wisconsin. Discover the ease of building your new home from scratch with confidence! Our streamlined process includes custom building, interior design, remodeling, realty—even a library of exclusive floor plans—allowing you to build an incredible home at an incredible value.
 						</p>
 					</div>

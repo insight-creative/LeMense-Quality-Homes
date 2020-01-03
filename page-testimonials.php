@@ -32,12 +32,12 @@ get_header();
 							<h2>Relationships Built to Last</h2>
 							<div class="underline"></div>
 						</div>
-						<p class="blockText">
+						<p class="blockText limitWidth">
 						Our homes are built on mutual respect and customer satisfaction. When a job is complete, we’re always proud to add another beautiful home to our gallery, but we’re equally proud of the relationships we’ve built along the way. Read testimonials from real clients below.
 						</p>
 					</div>
 				</section>
-				<section id="testimonials" class="row">
+				<section id="testimonials" class="row limitWidth">
 					<?php
 					while ( have_posts() ) :
 						the_post();

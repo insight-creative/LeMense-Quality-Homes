@@ -416,9 +416,23 @@ Font Variables
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  max-width: 800px;
   margin: 0 auto;
   padding: 20px; }
+
+.blockTextLimitWidth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+  width: 800px; }
 
 .hero {
   display: flex;
@@ -2953,9 +2967,5 @@ xcustom form elements
   @media (min-width: 600px) {
     #theOwners .borderedImage {
       width: 50%; } }
-
-#testimonials {
-  max-width: 950px;
-  margin: 0 auto; }
 
 /*# sourceMappingURL=style.css.map */

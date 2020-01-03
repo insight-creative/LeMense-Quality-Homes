@@ -7,7 +7,7 @@ get_header();
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
 		<section id="privacyPolicy">
-		  <div class="pageWidth">
+		  <div class="limitWidth">
 	      <div class="projectTitleWrapper">
 	        <h1 class="primaryText">Privacy Policy</h1>
 	      </div>

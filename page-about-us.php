@@ -32,7 +32,7 @@ get_header();
 							<h2>Family Owned, Locally Known</h2>
 							<div class="underline"></div>
 						</div>
-						<p class="blockText">
+						<p class="blockText limitWidth">
 							Since 2000, LeMense Quality Homes has built some of Northeast Wisconsin’s most incredible custom homes at an incredible value. As a family-owned business, Mark, alongside his wife Shelly, manage the build process for each client from start to finish. Mark brings years of hands-on carpentry experience while Shelly contributes a detailed eye to project management and design. Known for their friendly approach and streamlined building process, the LeMenses offer custom building, interior design, remodeling, realty—even a library of exclusive floor plans—all from one local, trusted source. With valuable support from their crew of reliable subcontractors, plus their kids Jack, Bennett, Brenna and Kamden, the LeMense experience is affordable, easy and, most importantly, feels like home.
 						</p>
 					</div>
@@ -49,7 +49,7 @@ get_header();
 								<div class="overlayBorder"></div>
 							</div>
 						</div>
-						<div class="blockText">
+						<div class="blockTextLimitWidth">
 							<div class="titleWrap">
 								<h4>Meet Mark LeMense</h4>
 								<div class="underline"></div>
@@ -68,7 +68,7 @@ get_header();
 								<div class="overlayBorder"></div>
 							</div>
 						</div>
-						<div class="blockText">
+						<div class="blockTextLimitWidth">
 							<div class="titleWrap">
 								<h4>Meet Shelly LeMense</h4>
 								<div class="underline"></div>
