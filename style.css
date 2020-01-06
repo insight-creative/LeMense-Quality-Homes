@@ -641,7 +641,7 @@ Font Variables
   padding: 0 0 25px 0; }
 
 .limitWidth {
-  max-width: 1050px;
+  max-width: 800px;
   margin: 0 auto; }
 
 /*--------------------------------------------------------------
@@ -2266,7 +2266,8 @@ ul {
 
 .swiper-content-inner {
   padding: 20px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  max-width: 800px; }
   .swiper-content-inner .underline {
     margin: 0 auto; }
   .swiper-content-inner h6 {
