@@ -151,6 +151,9 @@
   @include breakpoint (largeScreen) {
     padding: 100px;
   }
+  @include breakpoint (extraLargeScreen) {
+    padding: 150px;
+  }
   h3, p {
     color: $white;
     margin-bottom: 0;

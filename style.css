@@ -641,7 +641,7 @@ Font Variables
   padding: 0 0 25px 0; }
 
 .limitWidth {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto; }
 
 /*--------------------------------------------------------------
@@ -1620,6 +1620,9 @@ ul {
   @media (min-width: 1400px) {
     .blueBack {
       padding: 100px; } }
+  @media (min-width: 1600px) {
+    .blueBack {
+      padding: 150px; } }
   .blueBack h3, .blueBack p {
     color: #FFFFFF;
     margin-bottom: 0; }
@@ -2849,6 +2852,11 @@ xcustom form elements
   @media (min-width: 992px) {
     .galleryWrapper img:nth-child(even) {
       margin: 20px 40px 20px 20px; } }
+
+.page-template-page-gallery-template p {
+  margin-bottom: 0em !important; }
+.page-template-page-gallery-template .blockText {
+  padding-bottom: 10px; }
 
 #portfolio p {
   margin-bottom: 0 !important; }

@@ -193,7 +193,7 @@ get_header();
 								</a>
 							</div>
 							<div class="col50">
-								<a href="/gallery/miscellaneous">
+								<a href="/gallery/details">
 									<div class="galleryCoverOuter">
 										<div class="galleryCover">
 											<?php
@@ -204,7 +204,7 @@ get_header();
 											<div class="overlayBorderOuter">
 												<div class="overlayBorder">
 													<div class="galleryTitleWrap">
-														<h2>Miscellaneous</h2>
+														<h2>Details</h2>
 														<div class="underline"></div>
 													</div>
 												</div>

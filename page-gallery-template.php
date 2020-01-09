@@ -27,15 +27,8 @@ get_header();
 		<div class="pageContentContainer">
 			<div class="navWidth">
 				<section class="paddedSection" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="1000">
-					<div class="drywallBack paddedSection galleryWrapper">
-						<?php
-							$images = get_field('gallery');
-							$size = 'full'; // (thumbnail, medium, large, full or custom size)
-							if( $images ): ?>
-				        <?php foreach( $images as $image_id ): ?>
-                	<?php echo wp_get_attachment_image( $image_id, $size ); ?>
-				        <?php endforeach; ?>
-							<?php endif; ?>
+					<div class="drywallBack navWidth paddedSection">
+		        <?php get_template_part('/inc/flexible-gallery'); ?>
 					</div>
 				</section>
 			</div>
