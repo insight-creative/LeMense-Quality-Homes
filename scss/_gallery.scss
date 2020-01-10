@@ -82,3 +82,18 @@
     padding-bottom: 10px;
   }
 }
+.galleryImageWrap {
+  margin-bottom: 50px;
+}
+.simpleCTA {
+  background-color: $brandColor;
+  .ctaInner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h6 {
+      color: $white;
+    }
+  }
+}

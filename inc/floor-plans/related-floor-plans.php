@@ -7,7 +7,7 @@
     if( $post_objects ): ?>
     <div class="drywallBack paddedSection">
       <div class="titleWrap limitWidth">
-        <h5 class="mediumHeading">Featured Floor Plans</h3>
+        <h5 class="mediumHeading">Recently Added Floor Plans</h3>
         <div class="underline"></div>
       </div>
       <div class="flexContainer navWidth">
@@ -40,7 +40,7 @@
         );?>
         <div class="drywallBack paddedSection">
           <div class="titleWrap limitWidth">
-            <h5 class="mediumHeading">Featured Floor Plans</h3>
+            <h5 class="mediumHeading">Recently Added Floor Plans</h3>
             <div class="underline"></div>
           </div>
           <div class="flexContainer navWidth">

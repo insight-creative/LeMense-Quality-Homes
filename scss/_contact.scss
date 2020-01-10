@@ -3,11 +3,59 @@
 --------------------------------------------------------------*/
 .page-id-120, .page-id-695, .page-id-693 {
   .subNav {
-    display: none;
+    ul:nth-child(2) {
+      display: none;
+    }
   }
+}
+.formWrapOuter{
+  background-color: $brandColor;
 }
 .formWrapInner {
   padding: 20px;
+  color: $white;
+  @include breakpoint (laptopScreen) {
+    padding: 50px;
+  }
+  @include breakpoint (megaScreen) {
+    padding: 100px;
+  }
+  h2 {
+    color: $white;
+  }
+  #caldera_form_1 {
+    label, .field_required {
+      color: $white !important;
+      font-size: 16px;
+      margin-bottom: 0;
+    }
+    .form-control {
+      border: 2px solid #d9d9d9;
+      border-radius: 0;
+      &:focus {
+        border: 2px solid $accentColor;
+        box-shadow: 0 0 8px rgba(	29, 43, 86, .6)
+      }
+    }
+    .row {
+      padding: 0;
+    }
+    .btn {
+      background-color: $white;
+      color: $brandColor;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 0;
+      transition: .2s ease;
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      &:hover {
+        background-color: $accentColor;
+        transition: .2s ease;
+      }
+    }
+  }
 }
 #caldera_form_1 {
   label, .field_required {
@@ -47,20 +95,34 @@
   a {
   	color: $brandColor;
   	transition: .2s ease;
+    font-weight: 900;
+    font-size: 24px;
+    text-decoration: none;
   	&:hover {
   		text-decoration: none;
-  		color: $darkGrey;
+  		color: $accentColor;
   		transition: .2s ease;
   	}
+  }
+  p {
+    position: relative;
+    z-index: 2;
+    font-weight: 900;
+    font-size: 24px;
+    color: $brandColor;
+    span {
+      font-weight: 400;
+    }
+  }
+  .blockText {
+    padding-top: 50px;
   }
 }
 .contactTestimonial {
   position: relative;
+  z-index: 1;
   margin: 0 auto;
-  margin-top: 100px;
-  @include breakpoint (laptopScreen) {
-    margin-top: 150px;
-  }
+  margin-top: 50px;
   &:before {
     position: absolute;
     z-index: 3;
@@ -95,6 +157,9 @@
     padding: 65px 20px 15px;
     @include breakpoint (laptopScreen) {
       padding: 100px 20px 15px;
+    }
+    @include breakpoint (megaScreen) {
+      padding: 100px 100px 15px;
     }
     .centerText {
       display: flex;

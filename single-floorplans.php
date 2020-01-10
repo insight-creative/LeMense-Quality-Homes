@@ -38,7 +38,7 @@ get_header();
 				</div>
 			</div>
 			<?php get_template_part("/inc/floor-plans/custom-post-nav"); ?>
-			<?php get_template_part("/inc/related-floor-plans"); ?>
+			<?php get_template_part("/inc/floor-plans/related-floor-plans"); ?>
 		</div>
 	</main>
 </div>

@@ -196,7 +196,7 @@ add_filter('pre_get_posts','search_filter');
 require_once("inc/custom-post-type.php");
 require_once("inc/custom-cats.php");
 require_once("inc/portfolio/custom-search.php");
-
+require_once("inc/build-breadcrumbs.php");
 /*********************************************************
 Enqueue scripts and styles
 *********************************************************/

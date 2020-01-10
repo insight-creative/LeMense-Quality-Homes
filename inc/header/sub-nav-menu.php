@@ -3,6 +3,7 @@
     <h2 class="screen-reader-text">Sub page navigation menu</h2>
     <div class="subNavWrapper">
       <?php
+      get_template_part('/inc/breadcrumbs');
       if ( $post->post_parent ) {
         $children = wp_list_pages( array(
           'title_li' => '',

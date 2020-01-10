@@ -47,3 +47,23 @@ ul {
 	padding: 15px;
 	margin: 0;
 }
+.breadcrumbs {
+	position: relative;
+	top: 1px;
+	display: flex;
+	color: $white;
+	font-size: 14px;
+	text-transform: uppercase;
+	li {
+		list-style-type: none;
+	}
+	.separator {
+		font-weight: 900;
+		margin: 0 5px;
+	}
+	a {
+		color: $white;
+		text-decoration : none;
+		padding: 0 !important;
+	}
+}

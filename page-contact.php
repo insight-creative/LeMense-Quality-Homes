@@ -27,7 +27,7 @@ get_header();
 		<div class="pageContentContainer">
 			<div class="navWidth flexContainer paddedSection">
 				<div class="col50">
-					<div class="formWrapOuter drywallBack">
+					<div class="formWrapOuter">
 						<div class="formWrapInner">
 							<h2 class="largeHeading">Are you ready to make your dream home a reality?</h2>
 							<p>Let’s start planning! Please reach out by completing the form below with a brief description of the project you have in mind. </p>
@@ -44,7 +44,8 @@ get_header();
 								Green Bay, WI 54311
 							</p>
 							<p>
-								<a href="tel:920-609-3575">(920) 609-3575</a><br>
+								<span>Tel:</span> <a href="tel:920-609-3575">(920) 609-3575</a><br>
+								<span>Fax:</span> (920) 544-8900<br>
 								<a href="mailto:lemensequalityhomes@icloud.com">Email Us</a>
 							</p>
 							<div class="contactTestimonial drywallBack">
