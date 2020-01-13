@@ -30,7 +30,10 @@ h1 {
 	}
 }
 h2 {
-	font-size: 49px;
+	font-size: 28px;
+	@include breakpoint (tabletScreen) {
+		font-size: 49px;
+	}
 }
 h3 {
 	font-size: 39px;

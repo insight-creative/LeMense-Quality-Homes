@@ -8,29 +8,29 @@ if( have_rows('flexible_fields') ):
     //////////////////////////////////
     if( get_row_layout() == 'one_column' ):
       ?>
-      <section id="<?php echo get_sub_field('section_name'); ?>" class="paddedSection <?php if ( get_sub_field('add_background') == true) : echo 'drywallBack'; endif; ?>">
+      <div>
         <?php
         $col_1 = get_sub_field('col_content_1');
         $custom_class = get_sub_field( 'add_custom_class' );
         ?>
-        <div class="flexContainer pageWidth">
+        <div class="navWidth">
           <?php
           if( $col_1 ): ?>
-            <div class="limitWidth">
+            <div>
               <div class="blockText">
                 <?php echo $col_1 ?>
               </div>
             </div>
           <?php endif; ?>
         </div>
-      </section>
+      </div>
       <?php
       ///////////////////////////////////
       // Simple Two Column Block
       //////////////////////////////////
       elseif( get_row_layout() == 'two_column' ):
         ?>
-        <section id="<?php echo get_sub_field('section_name'); ?>" class="paddedSection <?php if ( get_sub_field('add_background') == true) : echo 'drywallBack'; endif; ?>">
+        <div>
           <?php
           $col_1 = get_sub_field('col_content_1');
           $col_2 = get_sub_field('col_content_2');
@@ -54,14 +54,14 @@ if( have_rows('flexible_fields') ):
             endif;
             ?>
           </div>
-        </section>
+        </div>
       <?php
       ///////////////////////////////////
       // Simple Three Column Block
       //////////////////////////////////
       elseif( get_row_layout() == 'three_column' ):
       ?>
-      <section id="<?php echo get_sub_field('section_name'); ?>" class="paddedSection <?php if ( get_sub_field('add_background') == true) : echo 'drywallBack'; endif; ?>">
+      <div>
         <?php
           $col_1 = get_sub_field('col_content_1');
           $col_2 = get_sub_field('col_content_2');
@@ -93,7 +93,7 @@ if( have_rows('flexible_fields') ):
           endif;
           ?>
         </div>
-      </section>
+      </div>
       <?php
     endif;
   endwhile;

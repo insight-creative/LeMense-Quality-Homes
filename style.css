@@ -444,7 +444,7 @@ Font Variables
   background-repeat: no-repeat;
   background-position: center;
   height: 70vh;
-  top: 100px;
+  top: 98px;
   left: 2.5%; }
   @media (min-width: 1400px) {
     .hero {
@@ -1197,7 +1197,10 @@ h1 {
       font-size: 61px; } }
 
 h2 {
-  font-size: 49px; }
+  font-size: 28px; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 49px; } }
 
 h3 {
   font-size: 39px; }
@@ -1610,7 +1613,8 @@ ul {
 .titleWrap {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  text-align: center; }
 
 #aboutTheOwners .overlayBorder {
   border: 1px solid #1D2B56;
@@ -2121,6 +2125,7 @@ ul {
   #searchFormWrap input {
     width: 100%;
     background-color: #FFFFFF;
+    color: #1D2B56;
     border: 1px solid #FFFFFF;
     padding: 10px; }
   #searchFormWrap input::-webkit-input-placeholder {
@@ -2153,15 +2158,15 @@ ul {
     border: 1px solid #4D4D4D;
     padding: 10px; }
   #mobileSearch input::-webkit-input-placeholder {
-    color: #FFFFFF; }
+    color: #1D2B56; }
   #mobileSearch input::-moz-placeholder {
-    color: #FFFFFF; }
+    color: #1D2B56; }
   #mobileSearch input:-ms-input-placeholder {
-    color: #FFFFFF; }
+    color: #1D2B56; }
   #mobileSearch input::-ms-input-placeholder {
-    color: #FFFFFF; }
+    color: #1D2B56; }
   #mobileSearch input::placeholder {
-    color: #FFFFFF; }
+    color: #1D2B56; }
   #mobileSearch .search-submit {
     width: 20%;
     padding: 10px; }
@@ -2249,6 +2254,15 @@ ul {
 
 .search-form .search-submit {
   position: relative; }
+
+.search article {
+  width: 45%; }
+.search .entry-title a {
+  color: #1D2B56;
+  transition: .2s ease; }
+  .search .entry-title a:hover {
+    color: #172143;
+    transition: .2s ease; }
 
 .swiper-container-outer {
   position: relative;
@@ -2891,13 +2905,6 @@ xcustom form elements
 .detail:last-of-type {
   border-right: none; }
 
-#galleryIntro h2 {
-  text-align: center;
-  font-size: 40px; }
-  @media (min-width: 768px) {
-    #galleryIntro h2 {
-      font-size: 49px; } }
-
 .gallery .galleryCoverOuter {
   margin: 5px 10px; }
   @media (min-width: 768px) {
@@ -2964,6 +2971,11 @@ xcustom form elements
     flex-direction: column; }
     .simpleCTA .ctaInner h6 {
       color: #FFFFFF; }
+
+@media (min-width: 2000px) {
+  .single-portfolio p:first-of-type {
+    max-width: 1200px;
+    margin: 0 auto; } }
 
 #portfolio p {
   margin-bottom: 0 !important; }
@@ -3083,5 +3095,9 @@ xcustom form elements
   @media (min-width: 600px) {
     #theOwners .borderedImage {
       width: 50%; } }
+
+#testimonials p {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f6f6f6; }
 
 /*# sourceMappingURL=style.css.map */

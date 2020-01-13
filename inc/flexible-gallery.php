@@ -13,10 +13,10 @@ if( have_rows('flexible_fields') ):
         $col_1 = get_sub_field('col_content_1');
         $custom_class = get_sub_field( 'add_custom_class' );
         ?>
-        <div class="flexContainer pageWidth">
+        <div class="navWidth">
           <?php
           if( $col_1 ): ?>
-            <div class="limitWidth">
+            <div>
               <div class="blockText">
                 <?php echo $col_1 ?>
               </div>

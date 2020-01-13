@@ -19,6 +19,7 @@
   input {
     width: 100%;
     background-color: $white;
+    color: $brandColor;
     border: 1px solid $white;
     padding: 10px;
   }
@@ -60,19 +61,19 @@
     padding: 10px;
   }
   input::-webkit-input-placeholder {
-    color: $white;
+    color: $brandColor;
   }
   input::-moz-placeholder {
-    color: $white;
+    color: $brandColor;
   }
   input:-ms-input-placeholder {
-    color: $white;
+    color: $brandColor;
   }
   input::-ms-input-placeholder {
-    color: $white;
+    color: $brandColor;
   }
   input::placeholder {
-    color: $white;
+    color: $brandColor;
   }
   .search-submit {
     width: 20%;
@@ -170,5 +171,20 @@
 .search-form {
   .search-submit {
     position: relative;
+  }
+}
+.search {
+  article {
+    width: 45%;
+  }
+  .entry-title {
+    a {
+      color: $brandColor;
+      transition: .2s ease;
+      &:hover {
+        color: $brandColorDark;
+        transition: .2s ease;
+      }
+    }
   }
 }

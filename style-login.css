@@ -1,0 +1,38 @@
+body.login {
+  background-color: #1D2B56;
+  color: #ffffff;
+}
+#login h1 a, .login h1 a {
+  background-image: url("/wp-content/themes/insightcustom/images/LeMense-Logo-White.png");
+  height:100px;
+  width:320px;
+  background-size: 320px 100px;
+  background-repeat: no-repeat;
+  padding-bottom: 30px;
+}
+body.login div#login form#loginform {
+  background: #172143;
+  border: none;
+}
+body.login div#login form#loginform p label {
+  color: #ffffff;
+}
+body.login div#login form#loginform p.submit input#wp-submit {
+  background-color: #ffffff;
+  color: #1D2B56;
+  transition: .2s ease all;
+  text-shadow: none;
+  border: none;
+}
+body.login div#login form#loginform p.submit input#wp-submit:hover {
+  background-color: #1D2B56;
+  color: #ffffff;
+  transition: .2s ease all;
+}
+.login #login_error, .login .message, .login .success {
+  border-left: 4px solid #1D2B56;
+  color: #1D2B56;
+}
+#nav a, #backtoblog a {
+  color: #CC9F5B !important;
+}

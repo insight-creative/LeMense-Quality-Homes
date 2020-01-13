@@ -190,13 +190,20 @@ function search_filter( $query ) {
     return $query;
 }
 add_filter('pre_get_posts','search_filter');
-/*
-* Add in our custom post types
-*/
+/********************************************
+ Add in our custom post types and breadcrumbs
+********************************************/
 require_once("inc/custom-post-type.php");
 require_once("inc/custom-cats.php");
 require_once("inc/portfolio/custom-search.php");
 require_once("inc/build-breadcrumbs.php");
+/*********************************************************
+Add custom admin login screen styles
+*********************************************************/
+function my_login_stylesheet() {
+    wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/style-login.css' );
+}
+add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
 /*********************************************************
 Enqueue scripts and styles
 *********************************************************/

@@ -1,12 +1,3 @@
-#galleryIntro {
-  h2 {
-    text-align: center;
-    font-size: 40px;
-    @include breakpoint (tabletScreen) {
-      font-size: 49px;
-    }
-  }
-}
 .gallery {
   .galleryCoverOuter {
     margin: 5px 10px;

@@ -25,8 +25,12 @@ get_header();
 			</div>
 		</section>
 		<div class="pageContentContainer">
-			<div id="portfolio" class="navWidth paddedSection">
-        <?php get_template_part('/inc/flexible-columns'); ?>
+			<div class="navWidth">
+				<section class="paddedSection">
+					<div id="portfolio" class="paddedSection drywallBack">
+		        <?php get_template_part('/inc/flexible-columns'); ?>
+					</div>
+				</section>
 			</div>
 			<?php get_template_part("/inc/portfolio/custom-post-nav"); ?>
 			<?php get_template_part("/inc/related-projects"); ?>

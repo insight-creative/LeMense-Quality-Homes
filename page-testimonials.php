@@ -37,13 +37,16 @@ get_header();
 						</p>
 					</div>
 				</section>
-				<section id="testimonials" class="row limitWidth">
+				<section id="testimonials" class="limitWidth">
 					<?php
 					while ( have_posts() ) :
 						the_post();
 						the_content();
 					endwhile; // End of the loop.
 					?>
+				</section>
+				<section id="cta" class="paddedSection">
+					<?php get_template_part('/inc/simple-cta'); ?>
 				</section>
 			</div>
 		</div>
