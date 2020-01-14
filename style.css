@@ -2266,7 +2266,7 @@ ul {
 
 .swiper-container-outer {
   position: relative;
-  max-width: 1300px;
+  max-width: 2000px;
   margin: 0 auto; }
   .swiper-container-outer:before {
     position: absolute;
@@ -2302,7 +2302,7 @@ ul {
   height: 100%; }
 
 .swiper-slide {
-  max-width: 1300px;
+  max-width: 2000px;
   color: #4D4D4D !important;
   background: #FFFFFF;
   height: 500px !important;
@@ -2357,7 +2357,7 @@ ul {
 .swiper-content-inner {
   padding: 20px;
   margin: 0 auto;
-  max-width: 800px; }
+  max-width: 1100px; }
   .swiper-content-inner .underline {
     margin: 0 auto; }
   .swiper-content-inner h6 {
@@ -2973,7 +2973,7 @@ xcustom form elements
       color: #FFFFFF; }
 
 @media (min-width: 2000px) {
-  .single-portfolio p:first-of-type {
+  .single-portfolio .pageContentContainer p:first-of-type {
     max-width: 1200px;
     margin: 0 auto; } }
 

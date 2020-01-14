@@ -1,8 +1,10 @@
 .single-portfolio {
-  p:first-of-type {
-    @include breakpoint (megaScreen) {
-      max-width: 1200px;
-      margin: 0 auto;
+  .pageContentContainer {
+    p:first-of-type {
+      @include breakpoint (megaScreen) {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
     }
   }
 }

@@ -61,6 +61,8 @@ get_header();
                   <option value=".one-bathroom">1 Bathroom</option>
                   <option value=".two-bathroom">2 Bathroom</option>
                   <option value=".three-bathroom">3 Bathroom</option>
+									<option value=".four-bathroom">4 Bathroom</option>
+									<option value=".five-bathroom">5 Bathroom</option>
                 </select>
               </div> <!-- cd-select -->
             </div> <!-- cd-filter-content -->
@@ -71,6 +73,7 @@ get_header();
                   <option value="">Choose an option</option>
                   <option value=".one-story">1 Story</option>
                   <option value=".two-story">2 Story</option>
+									<option value=".three-story">3 Story</option>
                 </select>
               </div> <!-- cd-select -->
             </div> <!-- cd-filter-content -->
@@ -82,68 +85,70 @@ get_header();
                   <option value=".one-car-garage">1 Car Garage</option>
                   <option value=".two-car-garage">2 Car Garage</option>
                   <option value=".three-car-garage">3 Car Garage</option>
+									<option value=".three-car-garage-2">3+ Car Garage</option>
                 </select>
               </div> <!-- cd-select -->
             </div> <!-- cd-filter-content -->
           </div> <!-- cd-filter-block -->
         </form>
-      		<section class="cd-gallery">
-      			<ul>
-              <div class="floorPlanContainer">
-                <?php
-        					$the_query = new WP_Query( array(
-        						'post_type' => 'Floor Plans',
-        						'order' => 'DESC',
-        						'posts_per_page' => 70,
-        						)
-        					);
-        				while ( $the_query->have_posts() ) :
-            		$the_query->the_post();
-        				$img = get_the_post_thumbnail_url( $post_id, 'full' );
-                ////////////////////////////////
-        				// Get the category for the post
-        				////////////////////////////////
-        				$terms = get_the_terms( get_the_ID(), 'Floor Plan Categories' );
-        				if ( $terms && ! is_wp_error( $terms ) ) :
-        						$cat_links = array();
-        						foreach ( $terms as $term ) {
-        								$cat_links[] = $term->slug;
-        						}
-        				$custom_cat = join( " ", $cat_links );
-        				?>
-        				<?php endif; ?>
-                <li class="mix <?php echo $custom_cat ?>">
-        					<div class="floorPlanWrapper">
-        						<a href="<?php the_permalink() ?>" class="mix <?php echo $custom_cat ?>">
-                      <img src="<?php echo $img ?>" class="blockImage">
-          						<div class="floorPlanInfoWrap">
-                        <div class="floorPlanInfoWrapInner">
-                          <h4><?php the_title(); ?></h4>
-                          <div class="detailsContainer">
-														<p>
-															<?php if( get_field('square_footage') ):
-															echo get_field('square_footage'); ?> Sqft.
-															<?php endif; ?>
-														</p>
-														<p>
-															<?php echo get_field('number_of_bedrooms'); ?> Bed | <?php echo get_field('number_of_full_bathrooms'); ?> Bath
-														</p>
-                          </div>
-                          <div class="viewPlan">
-                            <p>
-                              View Home Design<span>View Home Design</span>
-                            </p>
-                          </div>
+    		<section class="cd-gallery">
+    			<ul>
+            <div class="floorPlanContainer">
+              <?php
+      					$the_query = new WP_Query( array(
+      						'post_type' => 'Floor Plans',
+      						'order' => 'DESC',
+      						'posts_per_page' => 100,
+									'paged' => $paged
+      						)
+      					);
+      				while ( $the_query->have_posts() ) :
+          		$the_query->the_post();
+      				$img = get_the_post_thumbnail_url( $post_id, 'full' );
+              ////////////////////////////////
+      				// Get the category for the post
+      				////////////////////////////////
+      				$terms = get_the_terms( get_the_ID(), 'Floor Plan Categories' );
+      				if ( $terms && ! is_wp_error( $terms ) ) :
+      						$cat_links = array();
+      						foreach ( $terms as $term ) {
+      								$cat_links[] = $term->slug;
+      						}
+      				$custom_cat = join( " ", $cat_links );
+      				?>
+      				<?php endif; ?>
+              <li class="mix <?php echo $custom_cat ?>">
+      					<div class="floorPlanWrapper">
+      						<a href="<?php the_permalink() ?>" class="mix <?php echo $custom_cat ?>">
+                    <img src="<?php echo $img ?>" class="blockImage">
+        						<div class="floorPlanInfoWrap">
+                      <div class="floorPlanInfoWrapInner">
+                        <h4><?php the_title(); ?></h4>
+                        <div class="detailsContainer">
+													<p>
+														<?php if( get_field('square_footage') ):
+														echo get_field('square_footage'); ?> Sqft.
+														<?php endif; ?>
+													</p>
+													<p>
+														<?php echo get_field('number_of_bedrooms'); ?> Bed | <?php echo get_field('number_of_full_bathrooms'); ?> Bath
+													</p>
+                        </div>
+                        <div class="viewPlan">
+                          <p>
+                            View Home Design<span>View Home Design</span>
+                          </p>
                         </div>
                       </div>
-        						</a>
-        					</div>
-                </li>
-                <?php endwhile; ?>
-              </div>
-      			</ul>
-      			<div class="cd-fail-message">No results found<br><a href="/floor-plans/">Reset Filters</a></div>
-      		</section> <!-- cd-gallery -->
+                    </div>
+      						</a>
+      					</div>
+              </li>
+              <?php endwhile; ?>
+            </div>
+    			</ul>
+    			<div class="cd-fail-message">No results found<br><a href="/floor-plans/">Reset Filters</a></div>
+    		</section> <!-- cd-gallery -->
 			</div>
 		</div>
 	</main>
