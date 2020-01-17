@@ -47,7 +47,7 @@ get_header();
 								$the_query = new WP_Query( array(
 									'post_type' => 'Portfolio',
 									'order' => 'DESC',
-									'posts_per_page' => 4,
+									'posts_per_page' => 6,
 									)
 								);
 								while ( $the_query->have_posts() ) :

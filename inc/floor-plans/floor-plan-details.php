@@ -21,5 +21,13 @@
         <span class="brandText"><?php echo get_field('number_of_garage_stalls'); ?></span> Car Garage
       </span>
     </p>
+    <?php if( get_field('project_url') ): ?>
+      <div class="btnWrap">
+        <a href="<?php echo get_field('project_url'); ?>" class="primaryBtn">View Completed Project<span>View Completed Project</span></a>
+      </div>
+    <?php endif; ?>
   </div>
+</div>
+<div class="btnWrap">
+  <a href="/floor-plans/" class="primaryBtn">Back to all plans<span>Back to all plans</span></a>
 </div>

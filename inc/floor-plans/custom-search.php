@@ -9,7 +9,7 @@ add_filter( 'pre_get_posts', 'custom_search' );
  */
 function custom_search( $query ) {
     if ( $query->is_search ) {
-	$query->set( 'post_type', array( 'post', 'portfolio', 'page' ) );
+	$query->set( 'post_type', array( 'post', 'page', 'portfolio', 'floor-plans' ) );
     }
     return $query;
 }

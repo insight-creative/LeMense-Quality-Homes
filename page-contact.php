@@ -45,7 +45,7 @@ get_header();
 							</p>
 							<p>
 								<span>Tel:</span> <a href="tel:920-609-3575">(920) 609-3575</a><br>
-								<span>Fax:</span> (920) 544-8900<br>
+								<span>Fax: (920) 544-8900</span><br>
 								<a href="mailto:lemensequalityhomes@icloud.com">Email Us</a>
 							</p>
 							<div class="contactTestimonial drywallBack">

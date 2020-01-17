@@ -83,6 +83,14 @@
 .contactWrap {
   display: flex;
   align-items: center;
+  @include breakpoint (laptopScreen) {
+    align-items: baseline;
+    flex-direction: column;
+  }
+  @include breakpoint (largeScreen) {
+    align-items: center;
+    flex-direction: row;
+  }
   .blockImage {
     @include breakpoint (megaScreen) {
       width: 80%;
@@ -91,8 +99,21 @@
   h6 {
     margin-bottom: 0;
   }
+  .col20 {
+    width: 20%;
+  }
   .col80 {
+    width: 80%;
     margin-left: 10px;
+    margin-bottom: 15px;
+    @include breakpoint (laptopScreen) {
+      width: 100%;
+      margin-left: 0;
+    }
+    @include breakpoint (largeScreen) {
+      width: 80%;
+      margin-left: 10px;
+    }
   }
   a {
 		color: $accentColor;
@@ -536,6 +557,7 @@ xcustom form elements
   .col70 {
     .floorPlanDetailsOuter {
       margin-top: 10px;
+      margin-bottom: 10px;
     }
   }
   .formWrap {
@@ -548,6 +570,10 @@ xcustom form elements
   padding: 10px;
   p {
     margin-bottom: 0 !important;
+  }
+  .btnWrap {
+    text-align: center;
+    margin-top: 15px;
   }
 }
 .detailWrapper {

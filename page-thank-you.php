@@ -28,18 +28,17 @@ get_header();
 			<div class="navWidth paddedSection">
 				<section id="thankYou" class="paddedSection" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="1000">
 					<div class="drywallBack paddedSection">
-						<div class="titleWrap">
+						<div class="titleWrap limitWidth">
 							<h2>Thank You for Your Interest in Our Work!</h2>
 							<div class="underline"></div>
 						</div>
 						<p class="blockText limitWidth">
-						We'll get back to you as soon as we can. In the meantime, browse some of our projects or floor plans below. We look forward to working with you!
+						We'll get back to you as soon as we can. In the meantime, browse some of our featured projects below. We look forward to working with you!
 						</p>
 					</div>
 				</section>
 			</div>
 			<?php get_template_part('/inc/related-projects'); ?>
-			<?php get_template_part('/inc/related-floor-plans'); ?>
 		</div>
 	</main>
 </div>

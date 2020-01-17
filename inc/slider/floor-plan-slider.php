@@ -9,13 +9,9 @@
   	  		// vars
   	  		$img = get_sub_field('floor_plan_image');
   	  		?>
-          <div class="swiper-slide">
+          <div class="swiper-slide" style="background-image:url('<?php echo $img ?>')">
             <div class="swiper-content">
               <div class="swiper-content-inner">
-                <?php
-    			        $imageID = $img['ID'];
-    			        echo wp_get_attachment_image( $imageID, 'full', false, array( 'class' => 'blockImage', 'data-sizes' => 'auto' ) );
-    			      ?>
               </div>
             </div>
           </div>
