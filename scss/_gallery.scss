@@ -17,7 +17,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: rgba(29, 43, 86, 0.3);
+      background-color: rgba(29, 43, 86, 0.7);
       h2, h6 {
         color: $white;
         text-shadow: 2px 2px 5px rgba(29, 43, 86, 0.7);
@@ -27,7 +27,7 @@
       .overlayBorder{
         margin: 0;
         height: calc(100% - 6px);
-        background-color: rgba(29, 43, 86, 0.7);
+        background-color: rgba(29, 43, 86, 0.9);
         transition: .3s ease;
       }
       .underline {
@@ -85,6 +85,11 @@
     flex-direction: column;
     h6 {
       color: $white;
+      text-align: center;
+      font-size: 24px;
+      @include breakpoint (largeMobileScreen) {
+        font-size: 39px;
+      }
     }
   }
 }

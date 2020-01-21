@@ -5,7 +5,10 @@
         <div class="swiper-content">
           <div class="swiper-content-inner">
             <p>
-              It was an amazing experience working with Shelly and Mark at LeMense Quality Homes. They made us feel that our needs and satisfaction was their number one priority. Our home is exceptionally well built with amazing attention to details; which exceeded our expectations. To this day, we still can’t believe this is our home.
+              It was an amazing experience working with Shelly and Mark at LeMense Quality Homes. They made us feel
+              that our needs and satisfaction was their number one priority. Our home is exceptionally well built
+              with amazing attention to details which exceeded our expectations. To this day, we still can’t believe
+              this is our home.
             </p>
             <div class="centerText">
               <div class="underline"></div>
@@ -18,7 +21,10 @@
         <div class="swiper-content">
           <div class="swiper-content-inner">
             <p>
-              We were referred to Mark and Shelly via friends who had a great experience building with the LeMenses. As stressful a process as building a home can be, Mark and Shelly made it as stress-free and as enjoyable experience as possible. They were also very transparent in all costs. We not only received a beautiful, well-built house but we also acquired lifetime friends!
+              We were referred to Mark and Shelly via friends who had a great experience building with the
+              LeMenses. As stressful a process as building a home can be, Mark and Shelly made it as stress-free
+              and as enjoyable an experience as possible. They were also very transparent in all costs. We not only
+              received a beautiful, well-built house, but we also acquired lifetime friends!
             </p>
             <div class="centerText">
               <div class="underline"></div>

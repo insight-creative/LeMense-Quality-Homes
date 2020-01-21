@@ -26,7 +26,7 @@ get_header();
 		</section>
 		<div class="pageContentContainer">
 			<div class="navWidth">
-				<section class="paddedSection" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="1000">
+				<section class="paddedSection">
 					<div class="drywallBack paddedSection galleryImageWrap">
 		        <?php get_template_part('/inc/flexible-gallery'); ?>
 					</div>

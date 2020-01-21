@@ -58,58 +58,6 @@
 .postHeader{
   margin-bottom: 15px;
 }
-#search-2 {
-  background-color: $brandColor;
-  text-align: center;
-  border-radius: 10px;
-  h2 {
-    font-size: 1.6em;
-    font-weight: 700;
-    color: $white;
-  }
-  .searchForm {
-    padding: 0 0 20px 0;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-  }
-}
-#categories-2 {
-  background-color: $lightGrey;
-  margin-top: 25px;
-  .widget-title {
-    text-align: center;
-    font-size: 1.6em;
-  }
-  ul {
-    list-style-type: none;
-    padding: 0 0 20px 20px;
-  }
-}
-.socialOutterWrapper {
-  background-color: $brandColor;
-  margin-top: 25px;
-}
-.searchWrapper, .categoryWrapper, .socialOutterWrapper {
-  border-radius: 10px;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-}
-.blogSideBar {
-  nav {
-    width: 50%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin: 0 auto;
-    a {
-      width: 50px;
-    }
-  }
-  .socialWrapper {
-    img {
-      width: 25px;
-    }
-  }
-}
 .articleWrapper {
   .entry-header {
     display: block;
@@ -144,34 +92,6 @@
         justify-content: space-around;
   }
 }
-#sidebarAffiliations {
-  #affiliations {
-    padding: 0;
-  }
-  #affiliateTitleWrap {
-    width: 100%;
-    margin-top: 25px;
-  }
-  #affiliationsTitle {
-    &:before {
-      width: 0;
-    }
-    &:after {
-      width: 0;
-    }
-  }
-  #affiliateWrapper {
-    img {
-      width: 15%;
-      @include breakpoint (laptopScreen) {
-        width: 40%;
-      }
-      @include breakpoint (extraLargeScreen) {
-        width: 30%;
-      }
-    }
-  }
-}
 .innerWrap {
   padding: 0 0 20px 0;
 }
@@ -190,9 +110,6 @@
           }
         }
       }
-  }
-  .awsm_job_openings, .type-tour, .type-page {
-      padding: 0 25px 20px 25px;
   }
   #post-1358 {
     display: none;

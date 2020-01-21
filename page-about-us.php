@@ -26,14 +26,21 @@ get_header();
 		</section>
 		<div class="pageContentContainer">
 			<div class="navWidth">
-				<section id="companyIntro" class="paddedSection" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="1000">
+				<section id="companyIntro" class="paddedSection">
 					<div class="drywallBack paddedSection">
 						<div class="titleWrap">
 							<h2>Family Owned, Locally Known</h2>
 							<div class="underline"></div>
 						</div>
 						<p class="blockText limitWidth">
-							Since 2000, LeMense Quality Homes has built some of Northeast Wisconsin’s most incredible custom homes at an incredible value. As a family-owned business, Mark, alongside his wife Shelly, manage the build process for each client from start to finish. Mark brings years of hands-on carpentry experience while Shelly contributes a detailed eye to project management and design. Known for their friendly approach and streamlined building process, the LeMenses offer custom building, interior design, remodeling, realty—even a library of exclusive floor plans—all from one local, trusted source. With valuable support from their crew of reliable subcontractors, plus their kids Jack, Bennett, Brenna and Kamden, the LeMense experience is affordable, easy and, most importantly, feels like home.
+							Since 2000, LeMense Quality Homes has built some of Northeast Wisconsin’s most incredible custom
+							homes at an incredible value. As a family-owned business, Mark, alongside his wife, Shelly, manage the
+							build process for each client from start to finish. Mark brings years of hands-on carpentry experience
+							while Shelly contributes a detailed eye to project management and design. Known for their friendly
+							approach and streamlined building process, the LeMenses offer custom building, interior design,
+							remodeling, realty—even a library of exclusive floor plans—all from one local, trusted source. With
+							valuable support from their crew of reliable subcontractors, plus their kids Jack, Bennett, Brenna
+							and Kamden, the LeMense experience is affordable, easy and most importantly, feels like home.
 						</p>
 					</div>
 				</section>

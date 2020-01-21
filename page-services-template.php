@@ -26,12 +26,8 @@ get_header();
 		</section>
 		<div class="pageContentContainer">
 			<div class="navWidth">
-				<section id="serviceIntro" class="paddedSection" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="1000">
+				<section id="serviceIntro" class="paddedSection">
 					<div class="drywallBack paddedSection">
-						<div class="titleWrap">
-							<h2><?php the_field('title'); ?></h2>
-							<div class="underline"></div>
-						</div>
 						<p class="blockText limitWidth">
 							<?php the_field('description'); ?>
 						</p>

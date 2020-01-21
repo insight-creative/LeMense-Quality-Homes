@@ -26,14 +26,14 @@ get_header();
 		</section>
 		<div class="pageContentContainer">
 			<div class="navWidth">
-				<section id="companyIntro" class="paddedSection" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="1000">
+				<section id="companyIntro" class="paddedSection">
 					<div class="drywallBack paddedSection">
 						<div class="titleWrap">
 							<h2>A Better Building Process</h2>
 							<div class="underline"></div>
 						</div>
 						<p class="blockText limitWidth">
-							LeMense Quality Homes provides an unmatched home building experience in northeast Wisconsin. Discover the ease of building your new home from scratch with confidence! Our streamlined process includes custom building, interior design, remodeling, realty—even a library of exclusive floor plans—allowing you to build an incredible home at an incredible value.
+							LeMense Quality Homes provides an unmatched home building experience in Northeast Wisconsin. Discover the ease of building your new home from scratch with confidence! Our streamlined process includes custom building, interior design, remodeling, realty—even a library of exclusive floor plans—allowing you to build an incredible home at an incredible value.
 						</p>
 					</div>
 				</section>
@@ -69,7 +69,7 @@ get_header();
 					</div>
 				</section>
 				<section id="recentWork" class="row">
-					<h5 class="largeHeading centerText">Recent Work</h5>
+					<h5 class="extraLargeHeading centerText">Recent Work</h5>
 					<div class="workContainer">
 						<div class="recentWorkWrap borderedImage" data-aos="fade-in">
 							<?php

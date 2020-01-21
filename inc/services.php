@@ -1,4 +1,4 @@
-<h3 class="extraLargeHeading centerText">All-inclusive Services</h3>
+<h3 class="extraLargeHeading centerText">All-Inclusive Services</h3>
 <div class="pageWidth servicesContainer" data-aos="fade-in">
   <div class="serviceWrapper">
     <a href="/services/custom-building/">

@@ -556,8 +556,11 @@ xcustom form elements
   }
   .col70 {
     .floorPlanDetailsOuter {
-      margin-top: 10px;
+      margin-top: 20px;
       margin-bottom: 10px;
+      @include breakpoint (laptopScreen) {
+        margin-top: 10px;
+      }
     }
   }
   .formWrap {
@@ -581,8 +584,11 @@ xcustom form elements
   justify-content: center;
 }
 .detail {
-  padding: 0 10px;
+  padding: 0 5px;
   border-right: 1px solid $brandColor;
+  @include breakpoint (largeMobileScreen) {
+    padding: 0 10px;
+  }
 }
 .detail:last-of-type {
   border-right: none;

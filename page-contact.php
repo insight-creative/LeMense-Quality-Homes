@@ -30,7 +30,8 @@ get_header();
 					<div class="formWrapOuter">
 						<div class="formWrapInner">
 							<h2 class="largeHeading">Are you ready to make your dream home a reality?</h2>
-							<p>Let’s start planning! Please reach out by completing the form below with a brief description of the project you have in mind. </p>
+							<p>Let’s start planning! Please reach out by completing the form below with a brief description of
+								the project you have in mind. </p>
 							<?php echo do_shortcode('[caldera_form id="CF5e0a61e543770"]'); ?>
 						</div>
 					</div>
@@ -50,7 +51,10 @@ get_header();
 							</p>
 							<div class="contactTestimonial drywallBack">
 								<div class="contactTestimonialInner">
-									We were referred to Mark and Shelly via friends who had a great experience building with the LeMenses. As stressful a process as building a home can be, Mark and Shelly made it as stress-free and as enjoyable experience as possible. They were also very transparent in all costs. We not only received a beautiful, well-built house but we also acquired lifetime friends!
+									We were referred to Mark and Shelly via friends who had a great experience building with the LeMenses.
+									As stressful a process as building a home can be, Mark and Shelly made it as stress-free and as
+									enjoyable an experience as possible. They were also very transparent in all costs. We not only received
+									a beautiful, well-built house, but we also acquired lifetime friends!
 									<div class="centerText">
 			              <div class="underline"></div>
 			              <h6>Kevin and Becky Baranczyk</h6>

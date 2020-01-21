@@ -26,10 +26,10 @@ get_header();
 		</section>
 		<div class="pageContentContainer">
 			<div class="navWidth paddedSection">
-				<section id="thankYou" class="paddedSection" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="1000">
+				<section id="thankYou" class="paddedSection">
 					<div class="drywallBack paddedSection">
 						<div class="titleWrap limitWidth">
-							<h2>Thank You for Your Interest in Our Work!</h2>
+							<h2>Thank you for your interest in our work!</h2>
 							<div class="underline"></div>
 						</div>
 						<p class="blockText limitWidth">

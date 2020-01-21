@@ -27,7 +27,7 @@ get_header();
 		</section>
 		<div class="pageContentContainer">
 			<div class="navWidth">
-				<section id="floorPlanIntro" class="paddedSection" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="1000">
+				<section id="floorPlanIntro" class="paddedSection">
 					<div class="drywallBack paddedSection">
 						<div class="titleWrap limitWidth">
 							<h2>Browse our extensive library of original floor plans.</h2>

@@ -18,6 +18,11 @@ $(function() {
         $(".hamburger").toggleClass("is-active");
     });
 });
+$(function() {
+    $("#closeMenu").click(function(e){
+        $(".hamburger").toggleClass("is-active");
+    });
+});
 // Toggle search
 $(function() {
     $("#search").click(function(e){

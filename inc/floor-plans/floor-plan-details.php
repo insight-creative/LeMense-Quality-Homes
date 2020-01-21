@@ -28,6 +28,3 @@
     <?php endif; ?>
   </div>
 </div>
-<div class="btnWrap">
-  <a href="/floor-plans/" class="primaryBtn">Back to all plans<span>Back to all plans</span></a>
-</div>

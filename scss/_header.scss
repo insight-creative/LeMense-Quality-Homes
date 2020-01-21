@@ -21,16 +21,6 @@
     box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
 	}
 }
-.scrollUp {
-		-webkit-transform: translateY(0);
-    transform: translateY(0);
-		-webkit-transition: .3s ease;
-		transition: .3s ease;
-		@include breakpoint (laptopScreen) {
-			-webkit-transform: translateY(-165px);
-      transform: translateY(-165px);
-		}
-}
 .site-header{
 	position: fixed;
 	top: 0;
@@ -89,6 +79,10 @@
 }
 #secondary {
 	display: flex;
+	justify-content: space-between;
+	@include breakpoint (laptopScreen) {
+		justify-content: flex-end;
+	}
 	a {
 		color: $darkGrey;
 		text-decoration: none;
@@ -140,6 +134,8 @@
 			display: none;
 		}
 		li {
+			padding: 5px 15px;
+			margin: 0;
 			a {
 				font-size: 16px;
 			}
@@ -149,10 +145,11 @@
 .main-menu {
 	li {
 		list-style-type: none;
-		padding: 15px 5px;
+		margin: 10px 5px;
 		@include breakpoint (laptopScreen) {
 			padding: 5px;
 			border-bottom: none;
+			margin: 0;
 		}
 	}
 	.menu-item-126 {
@@ -220,7 +217,7 @@
 		position: relative;
 		align-items: center;
 	}
-	.menu-item:nth-child(2), .menu-item:nth-child(3) {
+	.menu-item:nth-child(2), .menu-item:nth-child(3), .menu-item:nth-child(4) {
 		padding-top: 0;
 		@include breakpoint (laptopScreen) {
 			padding-top: 5px;
@@ -273,18 +270,6 @@
 				font-weight: 700;
 			}
 		}
-	}
-}
-.mobileMenuItem {
-	background: $black;
-	line-height: 1;
-	@include breakpoint (laptopScreen) {
-		display: none;
-	}
-	a {
-		color: $white !important;
-		padding: 0 10px;
-		font-size: 14px;
 	}
 }
 #closeMenu {
@@ -363,14 +348,12 @@ nav{
 .hamburger.is-active .hamburger-inner:after {
   background-color: $black;
 }
-
 .hamburger-box {
   width: 30px;
   height: 24px;
   display: inline-block;
   position: relative;
 }
-
 .hamburger-inner {
   display: block;
   top: 50%;

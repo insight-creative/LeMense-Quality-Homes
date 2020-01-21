@@ -121,6 +121,9 @@
 	height: 70vh;
 	top: 98px;
 	left: 2.5%;
+	@include breakpoint (laptopScreen) {
+		height: 80vh;
+	}
 	@include breakpoint (largeScreen) {
 		top: 113px;
 	}
