@@ -28,6 +28,9 @@ h1 {
 	@include breakpoint (largeMobileScreen) {
 		font-size: 61px;
 	}
+	@include breakpoint (laptopScreen) {
+		line-height: 1em;
+	}
 }
 h2 {
 	font-size: 28px;
@@ -76,4 +79,6 @@ p {
 .smallHeading {
 	font-size: 25px;
 	margin-bottom: 0;
+	font-family: $openSans;
+	font-weight: 500;
 }

@@ -16,8 +16,8 @@ get_header();
 			</div>
 			<div class="headerOuterWrap">
 				<div class="headerInnerWrap" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="500">
-					<h1>Quality Custom Home Building</h1>
-					<p class="smallHeading">In Green Bay, WI</p>
+					<h1>Quality Custom Home Building<br>
+					<span class="smallHeading">In Green Bay, WI</span></h1>
 					<div class="arrow">
 						<?php get_template_part('/inc/svg-icons/chevron-down'); ?>
 					</div>
