@@ -14,6 +14,7 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link href="/wp-content/themes/insightcustom/images/favicon.png" rel="shortcut icon">
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="  crossorigin="anonymous"></script>
+	<!-- Preconnect to Google Analytics -->
 	<link rel="dns-prefetch" href="https://www.google-analytics.com">
 	<link rel="dns-prefetch" href="https://www.googletagmanager.com">
 	<link href="https://www.google-analytics.com" rel="preconnect" crossorigin>
