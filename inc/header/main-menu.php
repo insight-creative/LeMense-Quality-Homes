@@ -8,10 +8,10 @@
       </button>
     </div>
   </nav>
-  <nav id="primary" class="site-navigation" role="navigation" aria-label="primary navigation">
+  <nav id="primaryNav" class="site-navigation" role="navigation" aria-label="primary navigation">
     <h2 class="screen-reader-text">Main navigation</h2>
     <div class="main-menu-wrapper">
-      <ul class="main-menu menu" role="menu" aria-label="Main Menu">
+      <ul class="main-menu menu" aria-label="Main Menu">
       <?php
           wp_nav_menu( array(
               'theme_location'    => 'main-menu',

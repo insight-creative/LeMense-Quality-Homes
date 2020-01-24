@@ -11,7 +11,7 @@
 					<div class="col50">
 						<div class="blockText">
 							<h6>Let's Work Together</h6>
-							<img src="<?php echo get_template_directory_uri(); ?>/images/LeMense-Logo-White.png">
+							<img src="<?php echo get_template_directory_uri(); ?>/images/LeMense-Logo-White.png" alt="LeMense Quality Homes, Inc. Logo in White">
 							<p>
 								3609 Glen Oaks Pass<br>
 								Green Bay, WI 54311
@@ -26,7 +26,7 @@
 							<nav id="footerNav" class="footerNavigation" role="navigation" aria-label="footer navigation">
 						    <h2 class="screen-reader-text">Footer navigation</h2>
 						    <div class="main-menu-wrapper">
-						      <ul class="footerMenu menu" role="menu" aria-label="Main Menu">
+						      <ul class="footerMenu menu">
 						      <?php
 						          wp_nav_menu( array(
 						              'theme_location'    => 'main-menu',
