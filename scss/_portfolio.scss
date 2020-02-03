@@ -12,6 +12,12 @@
   p {
     margin-bottom: 0 !important;
   }
+  .blockText {
+    padding: 0;
+    @include breakpoint (laptopScreen) {
+      padding: 20px;
+    }
+  }
 }
 .nav-links-container {
   .nav-links {

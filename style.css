@@ -2997,6 +2997,11 @@ xcustom form elements
 
 #portfolio p {
   margin-bottom: 0 !important; }
+#portfolio .blockText {
+  padding: 0; }
+  @media (min-width: 992px) {
+    #portfolio .blockText {
+      padding: 20px; } }
 
 .nav-links-container .nav-links {
   display: -webkit-box;
