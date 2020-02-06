@@ -197,7 +197,7 @@ Remove default authentication and require login through password only
 remove_filter('authenticate', 'wp_authenticate_username_password', 20);
 add_filter('authenticate', function($user, $email, $password){
 //Check for empty fields
-  if(empty($email) || empty ($password)){        
+  if(empty($email) || empty ($password)){
     //create new error object and add errors to it.
     $error = new WP_Error();
     if(empty($email)){ //No email

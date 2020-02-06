@@ -4,7 +4,7 @@
  **/
 ?>
 </div><!-- #content -->
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="footer" class="site-footer" role="contentinfo">
 		<div class="footerContent">
 			<div id="footerContentInner">
 				<div class="flexContainer">
