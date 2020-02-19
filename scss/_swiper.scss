@@ -113,17 +113,8 @@
     }
   }
   .swiper-slide {
-    height: 300px !important;
+    height: 80vh !important;
     max-width: 2000px;
-    @include breakpoint (largeMobileScreen) {
-      height: 505px !important;
-    }
-    @include breakpoint (largeScreen) {
-      height: 705px !important;
-    }
-    @include breakpoint (megaScreen) {
-      height: 805px !important;
-    }
   }
   .swiper-button-next, .swiper-button-prev {
     height: 100%;
@@ -143,4 +134,8 @@
   .swiper-button-next {
     right: 0;
   }
+}
+.lity {
+  z-index: 99999999 !important;
+  background: $black !important;
 }

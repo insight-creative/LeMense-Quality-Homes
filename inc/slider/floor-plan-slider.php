@@ -9,9 +9,14 @@
   	  		// vars
   	  		$img = get_sub_field('floor_plan_image');
   	  		?>
-          <div class="swiper-slide" style="background-image:url('<?php echo $img ?>')">
+          <div class="swiper-slide">
             <div class="swiper-content">
               <div class="swiper-content-inner">
+                <div>
+                  <a href="<?php echo $img ?>" data-lity data-lity-target="<?php echo $img ?>">
+                    <img src="<?php echo $img ?>" class="blockImage">
+                  </a>
+                </div>
               </div>
             </div>
           </div>

@@ -67,6 +67,9 @@
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+		keyboard: {
+      enabled: true,
+    },
   });
 </script>
 <script src="/wp-content/themes/insightcustom/js/jquery.mixitup.min.js"></script>

@@ -2344,17 +2344,8 @@ ul {
   .single-floorplans .swiper-container-outer:after {
     content: ' '; }
 .single-floorplans .swiper-slide {
-  height: 300px !important;
+  height: 80vh !important;
   max-width: 2000px; }
-  @media (min-width: 600px) {
-    .single-floorplans .swiper-slide {
-      height: 505px !important; } }
-  @media (min-width: 1400px) {
-    .single-floorplans .swiper-slide {
-      height: 705px !important; } }
-  @media (min-width: 2000px) {
-    .single-floorplans .swiper-slide {
-      height: 805px !important; } }
 .single-floorplans .swiper-button-next, .single-floorplans .swiper-button-prev {
   height: 100%;
   background-color: rgba(29, 43, 86, 0.7);
@@ -2369,6 +2360,10 @@ ul {
   left: 0; }
 .single-floorplans .swiper-button-next {
   right: 0; }
+
+.lity {
+  z-index: 99999999 !important;
+  background: #303030 !important; }
 
 #floorPlansHero {
   background-image: url("/wp-content/uploads/2019/12/lemense-quality-homes-custom-home-exterior-large.jpg"); }

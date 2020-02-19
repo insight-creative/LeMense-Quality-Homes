@@ -13,6 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link href="/wp-content/themes/insightcustom/images/favicon.png" rel="shortcut icon">
+	<link rel="stylesheet" href="/wp-content/themes/insightcustom/assets/lity/lity.min.css">
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="  crossorigin="anonymous"></script>
 	<!-- Preconnect to Google Analytics -->
 	<link rel="dns-prefetch" href="https://www.google-analytics.com">

@@ -253,6 +253,7 @@ function insightcustom_scripts() {
 	wp_enqueue_script('AOS', get_stylesheet_directory_uri() . '/assets/aos/aos.js');
 	wp_enqueue_script('swiper', get_stylesheet_directory_uri() . '/assets/swiper/swiper.min.js');
 	wp_enqueue_script('customJS', get_stylesheet_directory_uri() . '/js/customJS.js');
+	wp_enqueue_script('lity', get_stylesheet_directory_uri() . '/assets/lity/lity.min.js');
 	wp_enqueue_style( 'AOS-Styles', get_stylesheet_directory_uri() . '/assets/aos/aos.css');
 	wp_enqueue_style( 'Swiper-styles', get_stylesheet_directory_uri() . '/assets/swiper/swiper.min.css');
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
