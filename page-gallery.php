@@ -216,7 +216,6 @@ get_header();
 						</div>
 					</div>
 				</section>
-
 			</div>
 		</div>
 	</main>
