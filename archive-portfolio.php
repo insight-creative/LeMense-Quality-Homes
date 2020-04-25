@@ -7,21 +7,7 @@ get_header();
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
 		<a id="main-content" tabindex="-1"></a>
-		<section id="floorPlansHero" class="hero" data-aos="fade-in" data-aos-duration="1500">
-			<div class="heroOverlay">
-				<div class="overlayBorderOuter">
-					<div class="overlayBorder"></div>
-				</div>
-			</div>
-			<div class="headerOuterWrap">
-				<div class="headerInnerWrap" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="500">
-					<h1>Featured Projects</h1>
-					<div class="arrow">
-						<?php get_template_part('/inc/svg-icons/chevron-down'); ?>
-					</div>
-				</div>
-			</div>
-		</section>
+		<?php get_template_part('/template-parts/hero'); ?>
 		<div class="pageContentContainer">
 			<div class="navWidth">
 				<section id="galleryIntro" class="paddedSection">

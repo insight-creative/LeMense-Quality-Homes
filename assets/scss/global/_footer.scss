@@ -1,0 +1,122 @@
+/*--------------------------------------------------------------
+6.0 Footer
+--------------------------------------------------------------*/
+.site-footer{
+	position: relative;
+	z-index: 5;
+	width: 100%;
+	margin: 0 auto;
+	background-color: $brandColor;
+	border-top: 5px solid $accentColor;
+}
+.footerContent{
+	p {
+		font-size: 16px;
+		line-height: 1.4em;
+		max-width: 600px;
+	}
+}
+#footerContentInner {
+	color: $white;
+	h6 {
+		color: $white;
+		font-size: 32px;
+	}
+	img {
+		width: 200px;
+		height: auto;
+	}
+	a {
+		color: $white;
+		text-decoration: none;
+		transition: .2s ease;
+		&:hover {
+			color: $accentColor;
+			transition: .2s ease;
+		}
+	}
+	.col50 {
+		padding: 100px 0;
+		@include breakpoint (laptopScreen) {
+			margin-left: 25px;
+		}
+		.blockText {
+			padding: 0 25px;
+			@include breakpoint (laptopScreen) {
+				padding: 20px;
+			}
+		}
+	}
+}
+.footerNavigation {
+	.footerMenu {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		li {
+			list-style-type: none;
+			font-family: $montserrat;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+		.sub-menu {
+			display: block;
+			li {
+				font-weight: 400;
+				font-family: $openSans;
+			}
+		}
+	}
+}
+#darkBlueBack {
+	background-image: url("/wp-content/themes/insightcustom/images/lqh-dark-footer-background.jpg");
+	background-color: $brandColorDark;
+	background-size: cover;
+	background-position: bottom right;
+}
+#footerSecond {
+	background-color: $accentColor;
+}
+#footerLogo {
+  display: flex;
+  justify-content: flex-end;
+  .custom-logo-link {
+    img {
+			max-width: 75px;
+			height: auto;
+		}
+  }
+}
+#copyright{
+	color: $brandColor;
+	font-size: 12px;
+	display: flex;
+  align-items: center;
+	flex-direction: column;
+	padding: 25px 0;
+	@include breakpoint (tabletScreen) {
+		flex-direction: row;
+		padding: 0;
+	}
+		p{
+			margin-top: 0;
+			margin-bottom: 0 !important;
+		}
+    @include breakpoint(largeScreen){
+    	flex-direction: row;
+    }
+		a:first-of-type {
+			margin-left: 5px;
+		}
+		a {
+			color: $brandColor;
+			transition: .2s ease;
+			&:hover {
+				text-decoration: none;
+				transition: .2s ease;
+			}
+		}
+		nav {
+			width: auto;
+		}
+}

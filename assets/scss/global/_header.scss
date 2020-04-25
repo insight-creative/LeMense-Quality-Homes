@@ -1,0 +1,419 @@
+/*--------------------------------------------------------------
+5.0 Header Styling
+--------------------------------------------------------------*/
+.screenReaderSkipToContent{
+	position: absolute;
+	top: -100px;
+	&:focus{
+		left: 6px;
+    top: 7px;
+    height: auto;
+    width: auto;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 23px 14px;
+    background: $brandColor;
+    color: $white;
+    z-index: 100000;
+    line-height: normal;
+    text-decoration: none;
+    box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
+	}
+}
+.site-header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	width: 100vw;
+	-webkit-transition: .3s ease;
+	transition: .3s ease;
+	background-color: $white;
+	border-bottom: 5px solid $brandColor;
+	@include breakpoint (laptopScreen) {
+		position: fixed;
+	}
+}
+#mastheadContainer {
+	background: $white;
+}
+#mastheadInner {
+	display: flex;
+	flex-direction: column;
+  align-items: center;
+	justify-content: space-between;
+	@include breakpoint (laptopScreen) {
+		flex-direction: row;
+		width: 95%;
+		margin: 0 auto;
+	}
+	@include breakpoint(largeScreen){
+		width: 90%;
+	}
+}
+#logoWrapper {
+	display: flex;
+	justify-content: space-between;
+	width: 95%;
+	@include breakpoint (laptopScreen) {
+		width: auto;
+	}
+}
+#siteLogo {
+	margin-top: 13px;
+}
+.site-navigation{
+	background: $white;
+	@include breakpoint (laptopScreen) {
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+#secondary {
+	display: flex;
+	justify-content: space-between;
+	@include breakpoint (laptopScreen) {
+		justify-content: flex-end;
+	}
+	a {
+		color: $darkGrey;
+		text-decoration: none;
+		margin-right: 10px;
+		padding: 10px 10px 0 10px;
+		font-size: 14px;
+		transition: .2s ease;
+		&:hover {
+			color: $brandColor;
+			transition: .2s ease;
+		}
+	}
+}
+.custom-logo-link {
+ img {
+	 width: 200px;
+	 height: auto;
+	 padding: 10px;
+	 @include breakpoint (largeScreen) {
+		 width: 250px;
+	 }
+ }
+}
+.navWrapper {
+	display: none;
+	width: 95%;
+	margin-bottom: 15px;
+	@include breakpoint (laptopScreen) {
+		display: block;
+		margin-bottom: 0;
+	}
+}
+.menu-main-menu-container {
+	width: 100%;
+	margin: 0 auto;
+	@include breakpoint (laptopScreen) {
+		width: 95%;
+	}
+	@include breakpoint (largeScreen) {
+		width: 60%;
+	}
+}
+.main-menu-wrapper {
+	ul {
+		padding: 0;
+	}
+	.sub-menu {
+		@include breakpoint (laptopScreen) {
+			display: none;
+		}
+		li {
+			padding: 5px 15px;
+			margin: 0;
+			a {
+				font-size: 16px;
+			}
+		}
+	}
+}
+.main-menu {
+	li {
+		list-style-type: none;
+		margin: 10px 5px;
+		@include breakpoint (laptopScreen) {
+			padding: 5px;
+			border-bottom: none;
+			margin: 0;
+		}
+	}
+	.menu-item-126 {
+		a {
+			background-color: $brandColor;
+			color: $white;
+			padding: 5px 20px;
+			transition: .2s ease;
+			&:hover {
+				background-color: $accentColor;
+				color: $brandColor;
+				transition: .2s ease;
+			}
+			&:after {
+				height: 0;
+			}
+		}
+	}
+	a {
+		font-family: $montserrat;
+		font-size: 20px;
+		font-weight: 600;
+		color: $brandColor;
+		padding: 10px;
+		text-decoration: none;
+		text-transform: uppercase;
+		position: relative;
+		&:after {
+			position: absolute;
+			content: "";
+			background: $brandColor;
+			bottom: 5px;
+			right: 0;
+			width: 100%;
+      transform: scaleX(0);
+			height: 3px;
+			transition: transform 0.2s ease-out;
+      transform-origin: bottom right;
+		}
+		&:hover {
+			&:after {
+				transform-origin: bottom left;
+				transform: scaleX(1);
+			}
+		}
+		&:focus{
+			&:after{
+        transform-origin: bottom left;
+        transform: scaleX(1);
+			}
+		}
+	}
+	@include breakpoint (laptopScreen) {
+		display: flex;
+		flex-direction: row;
+		position: relative;
+		align-items: center;
+	}
+	.menu-item:nth-child(2), .menu-item:nth-child(3), .menu-item:nth-child(4) {
+		padding-top: 0;
+		@include breakpoint (laptopScreen) {
+			padding-top: 5px;
+		}
+	}
+}
+.subNavWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.subNav {
+	background-color: $brandColor;
+	display: none;
+	@include breakpoint (largeMobileScreen) {
+		display: block;
+	}
+	nav {
+		width: 95%;
+		margin: 0 auto;
+		@include breakpoint (laptopScreen) {
+			width: 90%;
+		}
+	}
+	ul {
+		display: flex;
+		justify-content: flex-end;
+		padding: 0;
+		li {
+			list-style-type: none;
+			text-transform: uppercase;
+			a {
+				text-decoration: none;
+				color: $white;
+				padding: 0 10px;
+				font-size: 10px;
+				transition: .2s ease;
+				@include breakpoint (tabletScreen) {
+					font-size: 14px;
+				}
+				&:hover {
+					color: $accentColor;
+					transition: .2s ease;
+				}
+			}
+		}
+		.current_page_item {
+			a {
+				color: $accentColor;
+				font-weight: 700;
+			}
+		}
+	}
+}
+#closeMenu {
+	background-color: $brandColor;
+	color: $white;
+	padding: 10px;
+	width: 100%;
+	@include breakpoint (laptopScreen) {
+		display: none;
+	}
+}
+#close {
+	margin: 0 10px;
+}
+.current-menu-item{
+	a {
+		color: $accentColor;
+		position: relative;
+	}
+}
+.entry-header{
+	display:none;
+}
+nav{
+	width: 100%;
+}
+.open{
+	display: flex !important;
+	flex-direction: column;
+	background: $white;
+	-webkit-transition: .1s ease-out all !important;
+	transition: .1s ease-out all !important;
+}
+.menuButtonWrap{
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+		@include breakpoint(smallScreen){
+			padding: 15px 0 15px 15px;
+		}
+		@include breakpoint(laptopScreen){
+			display: none;
+		}
+}
+// Add Animation to our hamburger Menu
+.hamburger {
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition-property: opacity, -webkit-filter;
+  transition-property: opacity, -webkit-filter;
+  transition-property: opacity, filter;
+  transition-property: opacity, filter, -webkit-filter;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+	padding-top: 5px;
+}
+.hamburger:hover {
+  opacity: 0.7;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+}
+.hamburger.is-active:hover {
+  opacity: 0.7;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner:before,
+.hamburger.is-active .hamburger-inner:after {
+  background-color: $black;
+}
+.hamburger-box {
+  width: 30px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+.hamburger-inner, .hamburger-inner:before, .hamburger-inner:after {
+  width: 30px;
+  height: 3px;
+  background-color: $brandColor;
+  border-radius: 4px;
+  position: absolute;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+.hamburger-inner:before, .hamburger-inner:after {
+  content: "";
+  display: block;
+}
+.hamburger-inner:before {
+  top: -10px;
+}
+.hamburger-inner:after {
+  bottom: -10px;
+}
+/*
+* Collapse
+*/
+.hamburger--collapse .hamburger-inner {
+  top: auto;
+  bottom: -2px;
+  -webkit-transition-duration: 0.13s;
+	transition-duration: 0.13s;
+  -webkit-transition-delay: 0.13s;
+    transition-delay: 0.13s;
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--collapse .hamburger-inner:after {
+  top: -20px;
+  -webkit-transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
+  transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
+}
+.hamburger--collapse .hamburger-inner:before {
+  -webkit-transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), -webkit-transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), -webkit-transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--collapse.is-active .hamburger-inner {
+  -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+  -webkit-transition-delay: 0.22s;
+  transition-delay: 0.22s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.hamburger--collapse.is-active .hamburger-inner:after {
+  top: 0;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  -webkit-transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear;
+  transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear;
+}
+.hamburger--collapse.is-active .hamburger-inner:before {
+  top: 0;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), -webkit-transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), -webkit-transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+}

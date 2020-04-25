@@ -158,28 +158,7 @@ add_filter( 'wp_resource_hints', 'insightcustom_resource_hints', 10, 2 );
 /*********************************************************
 Advanced Custom Fields Customizations
 *********************************************************/
-/*********************************************************
-Add ACF options page for global settings
-*********************************************************/
-if( function_exists('acf_add_options_page') ) {
-	acf_add_options_page();
-}
-/*********************************************************
-Set fields to collapsed for a condensed view for new users
-*********************************************************/
-function my_acf_admin_head() {
-    ?>
-    <script type="text/javascript">
-        (function($){
-            $(document).ready(function(){
-                $('.layout').addClass('-collapsed');
-                $('.acf-postbox').addClass('closed');
-            });
-        })(jQuery);
-    </script>
-    <?php
-}
-add_action('acf/input/admin_head', 'my_acf_admin_head');
+require_once("inc/acf.php");
 /*
 * edits to the search query
 */
@@ -193,42 +172,7 @@ add_filter('pre_get_posts','search_filter');
 /********************************************
 Remove default authentication and require login through password only
 *********************************************/
-//remove wordpress authentication
-remove_filter('authenticate', 'wp_authenticate_username_password', 20);
-add_filter('authenticate', function($user, $email, $password){
-//Check for empty fields
-  if(empty($email) || empty ($password)){
-    //create new error object and add errors to it.
-    $error = new WP_Error();
-    if(empty($email)){ //No email
-        $error->add('empty_username', __('<strong>ERROR</strong>: Email field is empty.'));
-    }
-    else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){ //Invalid Email
-        $error->add('invalid_username', __('<strong>ERROR</strong>: Email is invalid.'));
-    }
-    if(empty($password)){ //No password
-        $error->add('empty_password', __('<strong>ERROR</strong>: Password field is empty.'));
-    }
-    return $error;
-  }
-  //Check if user exists in WordPress database
-  $user = get_user_by('email', $email);
-  //bad email
-  if(!$user){
-    $error = new WP_Error();
-    $error->add('invalid', __('<strong>ERROR</strong>: Either the email or password you entered is invalid.'));
-    return $error;
-  }
-  else{ //check password
-    if(!wp_check_password($password, $user->user_pass, $user->ID)){ //bad password
-      $error = new WP_Error();
-      $error->add('invalid', __('<strong>ERROR</strong>: Either the email or password you entered is invalid.'));
-      return $error;
-    }else{
-      return $user; //passed
-    }
-  }
-}, 20, 3);
+require_once("inc/login-email.php");
 /********************************************
  Add in our custom post types and breadcrumbs
 ********************************************/
@@ -236,6 +180,7 @@ require_once("inc/custom-post-type.php");
 require_once("inc/custom-cats.php");
 require_once("inc/portfolio/custom-search.php");
 require_once("inc/build-breadcrumbs.php");
+require_once("inc/remove-emoji.php");
 /*********************************************************
 Add custom admin login screen styles
 *********************************************************/
@@ -248,14 +193,11 @@ Enqueue scripts and styles
 *********************************************************/
 function insightcustom_scripts() {
 	wp_enqueue_style( 'insightcustom-style', get_stylesheet_uri() );
-	wp_enqueue_script( 'insightcustom-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-	wp_enqueue_script( 'insightcustom-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-	wp_enqueue_script('AOS', get_stylesheet_directory_uri() . '/assets/aos/aos.js');
-	wp_enqueue_script('swiper', get_stylesheet_directory_uri() . '/assets/swiper/swiper.min.js');
-	wp_enqueue_script('customJS', get_stylesheet_directory_uri() . '/js/customJS.js');
-	wp_enqueue_script('lity', get_stylesheet_directory_uri() . '/assets/lity/lity.min.js');
+	wp_enqueue_style( 'insightcustom', get_stylesheet_directory_uri() . '/assets/css/style.min.css' );
+	wp_enqueue_script('AOS', get_template_directory_uri() . '/assets/aos/aos.js');
 	wp_enqueue_style( 'AOS-Styles', get_stylesheet_directory_uri() . '/assets/aos/aos.css');
-	wp_enqueue_style( 'Swiper-styles', get_stylesheet_directory_uri() . '/assets/swiper/swiper.min.css');
+	wp_enqueue_script('custom', get_template_directory_uri() . '/assets/js/custom.min.js');
+	wp_enqueue_script('vendor', get_template_directory_uri() . '/assets/js/vendor.min.js');
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
