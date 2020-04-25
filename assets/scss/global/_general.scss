@@ -91,3 +91,11 @@ ul {
 .mtsnb-hidden.mtsnb-top {
 	transform: translateY(100%) translate3d(0,0,0);
 }
+.none {
+	display: none !important;
+}
+.page-template-default {
+	.site-content {
+		margin-top: 150px;
+	}
+}

@@ -16,7 +16,6 @@
 	background: $brandColor;
 	padding: 10px 25px 10px 25px;
 	color: $white;
-	-webkit-transition: .3s ease;
 	transition: .3s ease;
 	cursor: pointer;
   white-space: nowrap;
@@ -28,11 +27,9 @@
 		height: 5px;
 		width: 100%;
 		background-color: $accentColor;
-		-webkit-transition: .3s ease;
 		transition: .3s ease;
 	}
   &:hover{
-  	-webkit-transition: .3s ease;
   	transition: .3s ease;
 		&:after {
 			height: 100%;
@@ -65,7 +62,6 @@
 	background: rgba(255,255,255,.7);
 	padding: 10px 25px 10px 25px;
 	color: $brandColor;
-	-webkit-transition: .3s ease;
 	transition: .3s ease;
 	cursor: pointer;
   white-space: nowrap;
@@ -77,11 +73,9 @@
 		height: 5px;
 		width: 100%;
 		background-color: $accentColor;
-		-webkit-transition: .3s ease;
 		transition: .3s ease;
 	}
   &:hover{
-  	-webkit-transition: .3s ease;
   	transition: .3s ease;
 		&:after {
 			height: 100%;
@@ -111,7 +105,6 @@
 	text-decoration: none;
 	color: $brandColor;
 	font-weight: 700;
-	-webkit-transition: .2s ease;
 	transition: .2s ease;
 }
 button{
